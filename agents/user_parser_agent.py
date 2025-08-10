@@ -6,6 +6,8 @@ from langchain_community.callbacks.manager import get_openai_callback
 from utils.logger import init_log_file, log_token_usage
 from embeddings.embedding_model import embed_texts
 from qdrant_client.models import PointStruct
+from utils.qdrant_connection import upload_to_qdrant
+from config.llm_config import llm
 DEFAULT_PROMPT = """
 You are a helpful assistant that extracts structured information from user descriptions of their ideal property.
 
@@ -80,7 +82,7 @@ def generate_deterministic_id(obj: dict) -> str:
 
 # Expect you defined DEFAULT_PROMPT_USER elsewhere per your aligned schema
 # If not, pass it explicitly via the `prompt` parameter.
-def run_user_parser_agent(user_input: str, llm, log_file: str = "logs/token_usage.csv") -> dict:
+def run_user_parser_agent(user_input: str, log_file: str = "logs/token_usage.csv") -> dict:
     """
     Parse a renter's free-text description into the SAME schema as owner:
     hard_attributes: { state: [...], picture_url: null, price: <max budget>, num_bedrooms: <min>, available_from: <month|null> }
@@ -162,3 +164,21 @@ def prepare_users_for_qdrant(user_profiles: List[dict]) -> List[PointStruct]:
         ))
 
     return points
+
+
+
+def invoke_user_parser_agent(user_input: str) -> None:
+    """
+    Main function to invoke the owner parser agent.
+    Takes raw input from the owner, runs the agent, prepares data, and uploads to Qdrant.
+    """
+    # Run the agent to parse the input
+    parsed_user = run_user_parser_agent(user_input)
+
+    # Prepare for Qdrant upload
+    points = prepare_users_for_qdrant([parsed_user])
+
+    # Upload to Qdrant
+    upload_to_qdrant(points,"owner_agent_listings")
+
+    print(f"Listing uploaded with ID: {parsed_user.get('hard_attributes', {}).get('listing_id', 'unknown')}")
