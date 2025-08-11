@@ -4153,3 +4153,17 @@ timestamp,input_tokens,output_tokens,total_tokens,user_input
 2025-08-11T10:12:57.405513,548,72,620,"Looking for a 2-bedroom apartment in Brooklyn or Queens, budget up to $2,200 per month.   Must be pet-friendly, close to public transportation, and in a quiet neighborhood.   Hoping to move in by October.  "
 2025-08-11T10:17:17.458707,384,51,435,
 2025-08-11T10:18:56.916854,451,99,550,"Spacious 2-bedroom apartment in Astoria, Queens, just 5 minutes from the subway.  Includes a balcony with city views, newly renovated kitchen, and in-unit washer/dryer.  $2,400 per month, available starting October.   Picture: https://example.com/apt-photos/astoria2.jpg"
+2025-08-11T14:43:54.599994,446,93,539,"Spacious 2-bedroom apartment in  new york, just 5 minutes from the subway.
+Includes a balcony with city views, newly renovated kitchen, and in-unit washer/dryer.
+$2400 per month, available starting October.
+Picture: https://example.com/apt-photos/astoria2.jpg"
+2025-08-11T14:43:58.047861,552,77,629,"Looking for a 2-bedroom place in new york, ideally close to the subway.
+Quiet building, good for working from home; in-unit laundry is a plus.
+My budget is up to $2,500 per month and I'd like to move in by October."
+2025-08-11T14:56:54.202792,447,96,543,"Spacious 2-bedroom apartment in san fransisco, just 5 minutes from the subway.
+Includes a balcony with city views, newly renovated kitchen, and in-unit washer/dryer.
+$2400 per month, available starting October.
+Picture: https://example.com/apt-photos/astoria2.jpg"
+2025-08-11T14:56:57.198774,554,79,633,"Looking for a 2-bedroom place in san fransisco, ideally close to the subway.
+Quiet building, good for working from home; in-unit laundry is a plus.
+My budget is up to $2,500 per month and I'd like to move in by October."

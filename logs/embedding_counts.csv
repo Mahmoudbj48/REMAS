@@ -3021,3 +3021,7 @@ timestamp,input_tokens,output_tokens,total_tokens,text_input
 2025-08-10T18:02:06.098999,16,0,16,"quiet, pet-friendly, family-friendly, close to schools and park, nice view"
 2025-08-11T10:12:58.135640,10,0,10,"pet-friendly, close to public transportation, quiet neighborhood"
 2025-08-11T10:18:57.590067,25,0,25,"spacious, 5 minutes from the subway, balcony with city views, newly renovated kitchen, in-unit washer/dryer"
+2025-08-11T14:43:55.312129,22,0,22,"spacious, close to subway, balcony with city views, newly renovated kitchen, in-unit washer/dryer"
+2025-08-11T14:43:58.239928,18,0,18,"close to the subway, quiet building, good for working from home, in-unit laundry preferred"
+2025-08-11T14:56:54.911489,25,0,25,"spacious, 5 minutes from the subway, balcony with city views, newly renovated kitchen, in-unit washer/dryer"
+2025-08-11T14:56:57.366345,20,0,20,"quiet building, good for working from home, close to the subway, in-unit laundry is a plus"
