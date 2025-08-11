@@ -3019,3 +3019,5 @@ timestamp,input_tokens,output_tokens,total_tokens,text_input
 2025-08-09T19:38:57.649848,17,0,17,"spacious, near the subway, perfect for families, pet-friendly, close to schools"
 2025-08-09T19:44:07.375864,17,0,17,"spacious, near the subway, perfect for families, pet-friendly, close to schools"
 2025-08-10T18:02:06.098999,16,0,16,"quiet, pet-friendly, family-friendly, close to schools and park, nice view"
+2025-08-11T10:12:58.135640,10,0,10,"pet-friendly, close to public transportation, quiet neighborhood"
+2025-08-11T10:18:57.590067,25,0,25,"spacious, 5 minutes from the subway, balcony with city views, newly renovated kitchen, in-unit washer/dryer"

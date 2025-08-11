@@ -167,18 +167,20 @@ def prepare_users_for_qdrant(user_profiles: List[dict]) -> List[PointStruct]:
 
 
 
-def invoke_user_parser_agent(user_input: str) -> None:
+def invoke_user_parser_agent(user_input: str, collection: str = "user_agent_listings") -> str:
     """
-    Main function to invoke the owner parser agent.
-    Takes raw input from the owner, runs the agent, prepares data, and uploads to Qdrant.
+    Parse the user input, embed, and upload to Qdrant. Returns the point id.
     """
-    # Run the agent to parse the input
+    # 1) Parse
     parsed_user = run_user_parser_agent(user_input)
 
-    # Prepare for Qdrant upload
+    # 2) Prepare (this is where the deterministic ID is created)
     points = prepare_users_for_qdrant([parsed_user])
 
-    # Upload to Qdrant
-    upload_to_qdrant(points,"owner_agent_listings")
+    # 3) Upload to the *user* collection
+    upload_to_qdrant(points, collection)
 
-    print(f"Listing uploaded with ID: {parsed_user.get('hard_attributes', {}).get('listing_id', 'unknown')}")
+    # 4) Get the ID from the point you created
+    point_id = points[0].id                     # same as points[0].payload["listing_id"]
+    print(f"✅ Uploaded user query with ID: {point_id} to '{collection}'")
+    return point_id

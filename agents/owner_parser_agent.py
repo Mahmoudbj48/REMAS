@@ -133,22 +133,25 @@ def prepare_listings_for_qdrant(listings: list) -> list:
     return points
 
 
-def invoke_owner_parser_agent(owner_input: str) -> None:
+def invoke_owner_parser_agent(owner_input: str, collection: str = "owner_agent_listings") -> str:
     """
-    Main function to invoke the owner parser agent.
-    Takes raw input from the owner, runs the agent, prepares data, and uploads to Qdrant.
+    Parse an owner input, embed, and upload to Qdrant. Returns the point ID.
     """
-    # Run the agent to parse the input
+    # 1) Parse
     parsed_listing = run_owner_parser_agent(owner_input)
 
-    # Prepare for Qdrant upload
+    # 2) Prepare (creates deterministic ID & payload)
     points = prepare_listings_for_qdrant([parsed_listing])
+    if not points:
+        raise ValueError("No point created from parsed listing.")
 
-    # Upload to Qdrant
-    upload_to_qdrant(points,"owner_agent_listings")
+    # 3) Upload to the owner collection
+    upload_to_qdrant(points, collection)
 
-    print(f"Listing uploaded with ID: {parsed_listing.get('hard_attributes', {}).get('listing_id', 'unknown')}")
-    
+    # 4) Report/return the actual ID (same as payload['listing_id'])
+    point_id = points[0].id
+    print(f"✅ Uploaded owner listing with ID: {point_id} to '{collection}'")
+    return point_id
 
 
 
