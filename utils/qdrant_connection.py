@@ -1,6 +1,7 @@
 from qdrant_client import QdrantClient
-from qdrant_client.models import VectorParams, Distance
+from qdrant_client.models import VectorParams, Distance, Record
 from qdrant_client.http import exceptions as qdrant_exc
+from typing import Iterable, List, Union
 
 # Qdrant configuration
 AQDRANT_API_KEY= "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.79h_Yg9qXYtICf-fs1CMuMdK5Rw13OnE_DJR953fYQ4"
@@ -63,3 +64,37 @@ def count_qdrant(COLLECTION_NAME: str) -> int:
         collection_name=COLLECTION_NAME,
         exact=True  
     ).count
+
+
+from typing import Iterable, List, Union
+from qdrant_client.models import Record
+
+def get_points_by_ids(
+    COLLECTION_NAME: str,
+    ids: Iterable[Union[int, str]],
+    with_payload: bool = True,
+    with_vectors: bool = False,
+) -> List[Record]:
+    """
+    Retrieve multiple points by ID from a collection.
+    Returns a list of qdrant_client.models.Record (may be empty if IDs not found).
+    """
+    # Qdrant accepts str or int IDs; pass-through as-is
+    return client.retrieve(
+        collection_name=COLLECTION_NAME,
+        ids=list(ids),
+        with_payload=with_payload,
+        with_vectors=with_vectors,
+    )
+
+def get_point_by_id(
+    COLLECTION_NAME: str,
+    point_id: Union[int, str],
+    with_payload: bool = True,
+    with_vectors: bool = False,
+) -> Union[Record, None]:
+    """
+    Retrieve a single point by ID. Returns None if not found.
+    """
+    records = get_points_by_ids(COLLECTION_NAME, [point_id], with_payload, with_vectors)
+    return records[0] if records else None
