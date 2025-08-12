@@ -2,7 +2,10 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance, Record,Filter, FieldCondition, MatchValue, Record
 from qdrant_client.http import exceptions as qdrant_exc
 from typing import Iterable, List, Union, Dict, Any, Optional, Tuple
+import random
+import time
 import hashlib
+
 
 # Qdrant configuration
 AQDRANT_API_KEY= "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.79h_Yg9qXYtICf-fs1CMuMdK5Rw13OnE_DJR953fYQ4"
@@ -220,6 +223,7 @@ def print_user_matches_with_details(matches: List[dict], top_k: int = 5):
         oid = str(r["owner_id"])
         print(f"  score={r['score']:.4f}  owner_id={oid}")
         print(f"    {summarize_payload(owner_payloads.get(oid, {}))}")
+    return rows
 
 def print_owner_matches_with_details(matches: List[dict], top_k: int = 5):
     """Given matches from match_for_new_owner (has user_id), print full user details."""
@@ -232,3 +236,59 @@ def print_owner_matches_with_details(matches: List[dict], top_k: int = 5):
         uid = str(r["user_id"])
         print(f"  score={r['score']:.4f}  user_id={uid}")
         print(f"    {summarize_payload(user_payloads.get(uid, {}))}")
+    
+    return rows
+
+
+def _retrieve_payload(collection: str, point_id: str) -> Optional[dict]:
+    """Fetch a single point's payload by id."""
+    try:
+        recs: List[Record] = client.retrieve(
+            collection_name=collection,
+            ids=[point_id],
+            with_payload=True,
+            with_vectors=False
+        )
+        return (recs[0].payload or {}) if recs else None
+    except qdrant_exc.UnexpectedResponse:
+        return None
+
+
+def _fetch_user_payloads(user_ids: List[str]) -> Dict[str, dict]:
+    """Batch-retrieve user payloads by IDs."""
+    if not user_ids:
+        return {}
+    try:
+        recs: List[Record] = client.retrieve(
+            collection_name=USER_COLLECTION,
+            ids=user_ids,
+            with_payload=True,
+            with_vectors=False
+        )
+        return {str(r.id): (r.payload or {}) for r in recs}
+    except qdrant_exc.UnexpectedResponse:
+        return {}
+    
+
+def _iter_owner_ids(batch: int = 1000,owner_collection: str = OWNER_COLLECTION):
+    """Robust iterator over owner IDs with lightweight backoff on transient errors."""
+    next_page = None
+    while True:
+        try:
+            recs, next_page = client.scroll(
+                collection_name=owner_collection,
+                with_payload=False,
+                with_vectors=False,
+                limit=batch,
+                offset=next_page
+            )
+        except qdrant_exc.UnexpectedResponse:
+            # tiny jittered backoff and retry
+            time.sleep(0.5 + random.random())
+            continue
+
+        for r in recs:
+            yield str(r.id)
+
+        if next_page is None:
+            break
