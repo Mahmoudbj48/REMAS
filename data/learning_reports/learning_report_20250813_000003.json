@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-08-13T00:00:03.994338",
+  "feedback_summary": {
+    "total_entries": 20,
+    "avg_score": 3.3550000000000004,
+    "success_rate": 0.4
+  },
+  "feature_importance": {
+    "location": 0.25,
+    "price": 0.0,
+    "amenities": 0.0,
+    "lifestyle": 0.5
+  },
+  "parameter_updates": {
+    "high_confidence_updates": [],
+    "low_confidence_updates": [
+      {
+        "parameter_name": "location_weight",
+        "current_value": 0.3,
+        "suggested_value": 0.31839999999999996,
+        "confidence": 0.21722806078365212,
+        "reasoning": "Statistical: 5 entries, avg score 4.08, success rate 0.40. LLM reasoning: LLM analysis unavailable, using statistical baseline",
+        "feedback_count": 5,
+        "timestamp": "2025-08-12T23:59:58.553620",
+        "note": "Low confidence 0.22 - needs manual review"
+      }
+    ],
+    "recommendations_saved": true,
+    "files_created": [
+      "data/parameter_recommendations/recommendations_20250813_000003.csv"
+    ]
+  },
+  "current_parameters": {
+    "location_weight": 0.3,
+    "price_weight": 0.4,
+    "soft_attributes_weight": 0.2,
+    "amenities_weight": 0.1,
+    "quality_gate_threshold": 0.45,
+    "min_candidates": 3,
+    "max_invites": 10,
+    "price_tolerance": 0.15,
+    "bedroom_strict_matching": 0.8
+  },
+  "llm_strategic_insights": {
+    "overall_assessment": "Unable to generate LLM assessment",
+    "critical_issues": [
+      "LLM analysis unavailable"
+    ],
+    "improvement_opportunities": [],
+    "feature_recommendations": [],
+    "risk_areas": [],
+    "strategic_priorities": [
+      "Review system manually"
+    ]
+  },
+  "recommendations": [
+    "Overall satisfaction is low - consider comprehensive review of matching criteria",
+    "Low showing success rate - review quality thresholds and candidate screening",
+    "Location matching may need improvement - consider geographic/commute factors",
+    "Price matching effectiveness is low - review budget interpretation and tolerance",
+    "Accessibility needs mentioned - implement accessibility matching features"
+  ]
+}

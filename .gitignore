@@ -1,0 +1,5 @@
+.DS_Store
+utils/__pycache__/__init__.cpython-313.pyc
+utils/__pycache__/logger.cpython-313.pyc
+utils/__pycache__/qdrant_connection.cpython-313.pyc
+*.pyc

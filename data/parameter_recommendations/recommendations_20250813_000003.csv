@@ -1,0 +1,2 @@
+parameter_name,current_value,suggested_value,change_amount,confidence,reasoning,feedback_count,timestamp
+location_weight,0.3,0.31839999999999996,0.0184,0.217,"Statistical: 5 entries, avg score 4.08, success rate 0.40. LLM reasoning: LLM analysis unavailable, using statistical baseline",5,2025-08-12T23:59:58.553620
