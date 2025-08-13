@@ -320,3 +320,34 @@ def upload_profile(profile, type_):
         ]
     )
     print(f"✅ Uploaded profile to {collection_name}: {profile['full_name']}")
+
+
+def _get_profile(collection: str, profile_id: Union[str, int], *, as_record: bool = False) -> Optional[Union[Record, dict]]:
+    """Internal: retrieve a single profile by id from the given collection."""
+    try:
+        recs: List[Record] = client.retrieve(
+            collection_name=collection,
+            ids=[str(profile_id)],
+            with_payload=True,
+            with_vectors=False
+        )
+    except qdrant_exc.UnexpectedResponse:
+        return None
+
+    if not recs:
+        return None
+    return recs[0] if as_record else (recs[0].payload or {})
+
+def get_owner_profile(owner_point_id: Union[str, int], *, as_record: bool = False) -> Optional[Union[Record, dict]]:
+    """
+    Fetch the owner profile for a given owner_point_id.
+    Returns payload dict by default, or the full Record if as_record=True.
+    """
+    return _get_profile(OWNER_PROFILES_COLLECTION, owner_point_id, as_record=as_record)
+
+def get_user_profile(user_point_id: Union[str, int], *, as_record: bool = False) -> Optional[Union[Record, dict]]:
+    """
+    Fetch the user profile for a given user_point_id.
+    Returns payload dict by default, or the full Record if as_record=True.
+    """
+    return _get_profile(USER_PROFILES_COLLECTION, user_point_id, as_record=as_record)
