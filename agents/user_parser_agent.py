@@ -8,6 +8,9 @@ from embeddings.embedding_model import embed_texts
 from qdrant_client.models import PointStruct
 from utils.qdrant_connection import upload_to_qdrant
 from config.llm_config import llm
+from utils.synthetic_data_generation_upload import create_and_upload_profile
+
+
 DEFAULT_PROMPT = """
 You are a helpful assistant that extracts structured information from user descriptions of their ideal property.
 
@@ -183,4 +186,6 @@ def invoke_user_parser_agent(user_input: str, collection: str = "user_agent_list
     # 4) Get the ID from the point you created
     point_id = points[0].id                     # same as points[0].payload["listing_id"]
     print(f"✅ Uploaded user query with ID: {point_id} to '{collection}'")
+
+    create_and_upload_profile(point_id, "user")
     return point_id

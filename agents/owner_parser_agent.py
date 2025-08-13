@@ -7,7 +7,7 @@ from qdrant_client.models import PointStruct
 from utils.qdrant_connection import upload_to_qdrant
 from config.llm_config import llm
 import hashlib
-
+from utils.synthetic_data_generation_upload import create_and_upload_profile
 
 DEFAULT_PROMPT = """
 You are an assistant that extracts structured information from property descriptions submitted by owners.
@@ -151,6 +151,10 @@ def invoke_owner_parser_agent(owner_input: str, collection: str = "owner_agent_l
     # 4) Report/return the actual ID (same as payload['listing_id'])
     point_id = points[0].id
     print(f"✅ Uploaded owner listing with ID: {point_id} to '{collection}'")
+
+    create_and_upload_profile(point_id, "owner")
+
+    
     return point_id
 
 

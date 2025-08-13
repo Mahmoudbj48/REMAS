@@ -1,4 +1,4 @@
-from qdrant_client import QdrantClient
+from qdrant_client import QdrantClient , models
 from qdrant_client.models import VectorParams, Distance, Record,Filter, FieldCondition, MatchValue, Record
 from qdrant_client.http import exceptions as qdrant_exc
 from typing import Iterable, List, Union, Dict, Any, Optional, Tuple
@@ -13,6 +13,8 @@ QDRANT_URL = "https://3cf2848d-0574-468d-a996-0efabdea92b9.us-west-1-0.aws.cloud
 SIM_COLLECTION = "similarity_collection"
 OWNER_COLLECTION = "owner_agent_listings"
 USER_COLLECTION  = "user_agent_listings"
+OWNER_PROFILES_COLLECTION = "owner_profiles"
+USER_PROFILES_COLLECTION = "user_profiles"
 
 client = QdrantClient(
     url=QDRANT_URL,
@@ -292,3 +294,29 @@ def _iter_owner_ids(batch: int = 1000,owner_collection: str = OWNER_COLLECTION):
 
         if next_page is None:
             break
+
+
+
+def upload_profile(profile, type_):
+    """Upload profile dict to the relevant Qdrant collection."""
+    collection_name = OWNER_PROFILES_COLLECTION if type_ == "owner" else USER_PROFILES_COLLECTION
+
+    # Ensure collection exists (non-vector, payload-only storage)
+    if collection_name not in [c.name for c in client.get_collections().collections]:
+        client.recreate_collection(
+            collection_name=collection_name,
+            vectors_config=models.VectorParams(size=1, distance=models.Distance.COSINE)
+        )
+
+    # Use profile_id as point ID, dummy vector [0.0] since no embeddings are needed
+    client.upsert(
+        collection_name=collection_name,
+        points=[
+            models.PointStruct(
+                id=profile["profile_id"],
+                vector=[0.0],
+                payload=profile
+            )
+        ]
+    )
+    print(f"✅ Uploaded profile to {collection_name}: {profile['full_name']}")
