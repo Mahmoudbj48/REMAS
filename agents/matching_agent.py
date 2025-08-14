@@ -1,7 +1,12 @@
 # agents/matching_agent.py
 import time
 import hashlib
-from typing import List, Optional, Union
+from typing import List, Optional, Union, Dict, Any
+from utils.qdrant_connection import (
+    OWNER_COLLECTION, USER_COLLECTION,SIM_COLLECTION,
+    get_matches_by_owner, get_matches_by_user,
+    fetch_payloads_by_ids, get_point_by_id
+)
 
 from qdrant_client.models import (
     Filter, FieldCondition, MatchAny, MatchValue, Range, PointStruct, VectorParams, Distance
@@ -13,9 +18,6 @@ from utils.qdrant_connection import (
     get_point_by_id,             # helper you added earlier
 )
 
-OWNER_COLLECTION = "owner_agent_listings"
-USER_COLLECTION  = "user_agent_listings"
-SIM_COLLECTION   = "similarity_collection"
 
 # -----------------------------
 # Helpers
@@ -240,3 +242,144 @@ def match_for_new_owner(owner_point_id: Union[str, int], top_k: int = 50) -> Lis
         _save_similarity_pairs(pairs)
 
     return pairs
+
+
+
+# === Estimated match summaries for immediate feedback ===
+from typing import List, Dict, Any, Optional
+from utils.qdrant_connection import (
+    OWNER_COLLECTION, USER_COLLECTION,
+    get_matches_by_owner, get_matches_by_user,
+    fetch_payloads_by_ids, get_point_by_id
+)
+
+def _as_list(x):
+    if x is None:
+        return []
+    return x if isinstance(x, list) else [x]
+
+def _availability_ok(user_avail: Optional[str], owner_avail: Optional[str]) -> bool:
+    if not user_avail or not owner_avail:
+        return True
+    return str(user_avail).strip().lower()[:3] == str(owner_avail).strip().lower()[:3]
+
+def _hard_match(user_p: dict, owner_p: dict) -> bool:
+    u_states = set(map(lambda s: str(s).strip().lower(), _as_list(user_p.get("state"))))
+    o_states = set(map(lambda s: str(s).strip().lower(), _as_list(owner_p.get("state"))))
+    state_ok = (not u_states or not o_states) or (u_states & o_states)
+
+    try:
+        price_ok = (owner_p.get("price") is None) or (user_p.get("price") is None) or (float(owner_p["price"]) <= float(user_p["price"]))
+    except Exception:
+        price_ok = True
+
+    try:
+        beds_ok = (owner_p.get("bedrooms") is None) or (user_p.get("bedrooms") is None) or (int(owner_p["bedrooms"]) >= int(user_p["bedrooms"]))
+    except Exception:
+        beds_ok = True
+
+    avail_ok = _availability_ok(user_p.get("available_from"), owner_p.get("available_from"))
+    return bool(state_ok and price_ok and beds_ok and avail_ok)
+
+def _norm_id(s: Optional[str]) -> str:
+    # Lowercase, strip, remove hyphens
+    if s is None:
+        return ""
+    return str(s).strip().lower().replace("-", "")
+
+def _rank_in_inverse(inverse_rows: List[Dict[str, Any]], key: str, target_id: str) -> Optional[int]:
+    """Return 0-based rank if found, else None. Compares normalized IDs."""
+    targetN = _norm_id(target_id)
+    for i, row in enumerate(inverse_rows):
+        cand = row.get(key)
+        if _norm_id(cand) == targetN:
+            return i
+    return None
+
+def summarize_estimated_for_user(user_id: str, user_matches: List[Dict[str, Any]], check_top_k: int = 5) -> None:
+    # Fetch once
+    user_rec = get_point_by_id(USER_COLLECTION, user_id)
+    user_payload = (user_rec.payload if user_rec else {}) or {}
+
+    owner_ids = [str(m["owner_id"]) for m in user_matches]
+    owner_payloads = fetch_payloads_by_ids(OWNER_COLLECTION, owner_ids)
+
+    total_considered = len(user_matches)
+    top1_count = 0
+    top5_count = 0
+    hard_fit_count = 0
+
+    # Look a bit deeper when checking rank (helps if we later slice to top5)
+    RANK_WINDOW = max(50, check_top_k)
+
+    for m in user_matches:
+        oid = str(m["owner_id"])
+
+        # Inverse ranking: where does THIS user rank for THAT owner?
+        inverse = get_matches_by_owner(oid, top_k=RANK_WINDOW)
+        rank = _rank_in_inverse(inverse, key="user_id", target_id=user_id)
+        if rank is not None:
+            if rank == 0:
+                top1_count += 1
+            if rank < check_top_k:
+                top5_count += 1
+
+        # Hard attributes check
+        if _hard_match(user_payload, owner_payloads.get(oid, {}) or {}):
+            hard_fit_count += 1
+
+    print("=== Estimated opportunities for you ===")
+    print(f"- You appear as the #1 candidate in ~{top1_count} listing(s).")
+    print(f"- You appear in the top {check_top_k} for ~{top5_count} listing(s).")
+    print(f"- You have a strong ‘hard-attribute’ fit with ~{hard_fit_count} listing(s).")
+    print(f"- Total listings evaluated in this preview: {total_considered}")
+    if user_matches:
+        best = user_matches[0]
+        print(f"- Your current best score: {best.get('score', 0):.4f} (owner_id={best.get('owner_id')})")
+
+    print("\nNote: These are early estimates based on current matches.")
+    print("Final invitations depend on scheduling, fairness (giving chances to those with fewer shows),")
+    print("and listing popularity. You may not be invited to all matched properties.\n")
+
+def summarize_estimated_for_owner(owner_id: str, owner_matches: List[Dict[str, Any]], check_top_k: int = 5) -> None:
+    owner_rec = get_point_by_id(OWNER_COLLECTION, owner_id)
+    owner_payload = (owner_rec.payload if owner_rec else {}) or {}
+
+    user_ids = [str(m["user_id"]) for m in owner_matches]
+    user_payloads = fetch_payloads_by_ids(USER_COLLECTION, user_ids)
+
+    total_considered = len(owner_matches)
+    top1_count = 0
+    top5_count = 0
+    hard_fit_count = 0
+
+    RANK_WINDOW = max(50, check_top_k)
+
+    for m in owner_matches:
+        uid = str(m["user_id"])
+
+        # Inverse ranking: where does THIS owner rank for THAT user?
+        inverse = get_matches_by_user(uid, top_k=RANK_WINDOW)
+        rank = _rank_in_inverse(inverse, key="owner_id", target_id=owner_id)
+        if rank is not None:
+            if rank == 0:
+                top1_count += 1
+            if rank < check_top_k:
+                top5_count += 1
+
+        # Hard attributes check
+        if _hard_match(user_payloads.get(uid, {}) or {}, owner_payload):
+            hard_fit_count += 1
+
+    print("=== Estimated demand for your listing ===")
+    print(f"- Your listing appears as the #1 match for ~{top1_count} user(s).")
+    print(f"- Your listing appears in the top {check_top_k} for ~{top5_count} user(s).")
+    print(f"- There are ~{hard_fit_count} user(s) whose requirements strongly fit your listing.")
+    print(f"- Total users evaluated in this preview: {total_considered}")
+    if owner_matches:
+        best = owner_matches[0]
+        print(f"- Best current candidate score: {best.get('score', 0):.4f} (user_id={best.get('user_id')})")
+
+    print("\nNote: These are early estimates to help you gauge interest.")
+    print("Actual showings are scheduled by our agent considering fairness, user availability,")
+    print("and platform-wide demand management.\n")
