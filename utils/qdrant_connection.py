@@ -1,10 +1,14 @@
 from qdrant_client import QdrantClient , models
-from qdrant_client.models import VectorParams, Distance, Record,Filter, FieldCondition, MatchValue, Record
+from qdrant_client.models import VectorParams, Distance, Record,Filter, FieldCondition, MatchValue
 from qdrant_client.http import exceptions as qdrant_exc
 from typing import Iterable, List, Union, Dict, Any, Optional, Tuple
 import random
 import time
 import hashlib
+from tqdm.auto import tqdm
+
+
+
 
 
 # Qdrant configuration
@@ -15,6 +19,7 @@ OWNER_COLLECTION = "owner_agent_listings"
 USER_COLLECTION  = "user_agent_listings"
 OWNER_PROFILES_COLLECTION = "owner_profiles"
 USER_PROFILES_COLLECTION = "user_profiles"
+MAX_INVITES_DEFAULT = 10  # used to re-fetch matches when needed
 
 client = QdrantClient(
     url=QDRANT_URL,
@@ -351,3 +356,189 @@ def get_user_profile(user_point_id: Union[str, int], *, as_record: bool = False)
     Returns payload dict by default, or the full Record if as_record=True.
     """
     return _get_profile(USER_PROFILES_COLLECTION, user_point_id, as_record=as_record)
+
+
+
+# ---- Helpers ----
+
+def _pair_id(user_id: str, owner_id: str) -> str:
+    """Deterministic match ID (must match your write logic)."""
+    return hashlib.md5(f"{user_id}::{owner_id}".encode("utf-8")).hexdigest()
+
+def _get_matches_by_owner(owner_id: str, top_k: int) -> List[Dict[str, Any]]:
+    """
+    Local shim that re-uses your similarity collection.
+    If you already have utils.get_matches_by_owner, import & use that instead.
+    """
+    from utils.qdrant_connection import get_matches_by_owner as _g
+    return _g(owner_id, top_k=top_k)
+
+def _inc_number_of_shows(collection: str, point_id: str, delta: int = 1) -> None:
+    """Read-modify-write increment for profile.number_of_shows."""
+    try:
+        recs: List[Record] = client.retrieve(
+            collection_name=collection,
+            ids=[str(point_id)],
+            with_payload=True,
+            with_vectors=False
+        )
+        if not recs:
+            return
+        payload = recs[0].payload or {}
+        try:
+            current = int(payload.get("number_of_shows", 0))
+        except Exception:
+            current = 0
+        payload["number_of_shows"] = current + delta
+        client.set_payload(collection_name=collection, payload=payload, points=[recs[0].id])
+    except Exception:
+        # swallow; you may want to log
+        pass
+
+def _delete_pairs_by_ids(pair_ids: List[str]) -> int:
+    """Delete similarity records by deterministic pair IDs."""
+    if not pair_ids:
+        return 0
+    # Qdrant supports deleting by list of point IDs
+    try:
+        client.delete(collection_name=SIM_COLLECTION, points=pair_ids, wait=True)
+        return len(pair_ids)
+    except Exception:
+        return 0
+
+# ---- Main function ----
+from typing import List, Dict, Any
+from tqdm.auto import tqdm
+
+# Assumes these exist in your module scope:
+# - client (QdrantClient)
+# - SIM_COLLECTION = "similarity_collection"
+# - OWNER_PROFILES_COLLECTION, USER_PROFILES_COLLECTION
+# - _get_matches_by_owner(owner_id, top_k)
+# - _inc_number_of_shows(collection, point_id, delta)
+
+MAX_INVITES_DEFAULT = 10  # keep your default
+
+def organize_dataset_after_showings(
+    results: List[Dict[str, Any]],
+    *,
+    top_k_for_recovery: int = MAX_INVITES_DEFAULT,
+    dry_run: bool = False,
+) -> Dict[str, Any]:
+    """
+    Apply side-effects of showing decisions back to the dataset.
+
+    For each result row (owner):
+      - If decision.show == "1":
+          * invited users = by participate_indices OR first `num` from top_k matches
+          * increment owner_profile (+1) and each invited user_profile (+1)
+          * delete chosen (owner,user) pairs from similarity_collection by REAL pair IDs (record.id)
+    """
+    owners_processed = 0
+    owners_with_show = 0
+    user_updates = 0
+    owner_updates = 0
+    pairs_deleted = 0
+
+    updated_users: List[str] = []
+    updated_owners: List[str] = []
+    deleted_pairs: List[str] = []
+
+    for row in tqdm(results, desc="Applying showing decisions", unit="owner"):
+        if "error" in row:
+            continue
+
+        oid = str(row.get("owner_id"))
+        decision = (row.get("decision") or {})
+        show = str(decision.get("show", "0"))
+        owners_processed += 1
+
+        if show != "1":
+            continue
+
+        owners_with_show += 1
+
+        # ---- Resolve invited user IDs ----
+        invited_user_ids: List[str] = []
+
+        # A) indices provided
+        matches = None
+        if isinstance(decision.get("participate_indices"), list):
+            matches = _get_matches_by_owner(oid, top_k=top_k_for_recovery)
+            for i in decision["participate_indices"]:
+                try:
+                    i = int(i)
+                except Exception:
+                    continue
+                if 0 <= i < len(matches):
+                    invited_user_ids.append(str(matches[i]["user_id"]))
+        else:
+            # B) fallback to 'num' top users
+            try:
+                n = int(decision.get("num", 0))
+            except Exception:
+                n = 0
+            if n > 0:
+                matches = _get_matches_by_owner(oid, top_k=top_k_for_recovery)
+                invited_user_ids.extend([str(m["user_id"]) for m in matches[:n]])
+
+        invited_user_ids = list(dict.fromkeys(invited_user_ids))  # dedupe
+
+        if dry_run:
+            # No writes in dry-run mode
+            continue
+
+        # ---- Increment shows ----
+        _inc_number_of_shows(OWNER_PROFILES_COLLECTION, oid, delta=1)
+        owner_updates += 1
+        updated_owners.append(oid)
+
+        for uid in invited_user_ids:
+            _inc_number_of_shows(USER_PROFILES_COLLECTION, uid, delta=1)
+            user_updates += 1
+            updated_users.append(uid)
+
+        # ---- Delete chosen pairs by REAL pair IDs (record.id) ----
+        # If matches not fetched above (e.g., num=0 edge), fetch now just in case
+        if matches is None:
+            matches = _get_matches_by_owner(oid, top_k=top_k_for_recovery)
+
+        # Build user_id -> pair_id mapping from matches (your get_matches_by_owner should set "pair_id": str(record.id))
+        user_to_pair = {str(m["user_id"]): str(m.get("pair_id", "")) for m in (matches or [])}
+
+        real_ids_to_delete = [user_to_pair.get(uid) for uid in invited_user_ids]
+        real_ids_to_delete = [rid for rid in real_ids_to_delete if rid]  # keep non-empty
+
+        if real_ids_to_delete:
+            client.delete(
+                collection_name=SIM_COLLECTION,
+                points_selector=real_ids_to_delete,  # <-- current qdrant-client kw
+                wait=True
+            )
+            pairs_deleted += len(real_ids_to_delete)
+            deleted_pairs.extend(real_ids_to_delete)
+        # (Optional) else: you could fallback to a payload lookup by (owner_id,user_id) if needed.
+
+    summary = {
+        "owners_processed": owners_processed,
+        "owners_with_show": owners_with_show,
+        "owners_incremented": owner_updates,
+        "users_incremented": user_updates,
+        "pairs_deleted": pairs_deleted,
+        "updated_owner_ids": updated_owners,
+        "updated_user_ids": updated_users,
+        "deleted_pair_ids": deleted_pairs,
+        "dry_run": dry_run,
+    }
+
+    print("\n=== organize_dataset_after_showings summary ===")
+    print(f"owners_processed:   {owners_processed}")
+    print(f"owners_with_show:   {owners_with_show}")
+    print(f"owners_incremented: {owner_updates}")
+    print(f"users_incremented:  {user_updates}")
+    print(f"pairs_deleted:      {pairs_deleted}")
+    if dry_run:
+        print("(dry run — no writes performed)")
+
+    return summary
+
