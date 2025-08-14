@@ -28,7 +28,7 @@ emails += [f"user{i}@example.com" for i in range(1, 8)]
 phones = [f"+1-555-{random.randint(1000,9999)}" for _ in range(20)]
 
 # Generate list of dates between 2025-07-01 and 2025-08-12
-start_date = datetime(2025, 7, 1)
+start_date = datetime(2025, 7, 10)
 end_date = datetime(2025, 8, 12)
 date_list = [
     (start_date + timedelta(days=i)).strftime("%Y-%m-%d") 

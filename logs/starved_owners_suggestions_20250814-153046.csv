@@ -1,0 +1,21 @@
+owner_id,days_since_application,number_of_shows,baseline_matches,relax_price_minus_matches,delta_price,suggested_price,price_message
+000f06c2-872e-96e6-dd72-c50e8e92923e,44,0,159,159,0,,
+01d737e9-04da-6b4e-6278-75e3469a56b2,31,0,194,194,0,,
+02094f83-523e-3064-9d70-e602aa3cd385,40,0,71,79,8,2400.0,"Hi! Your listing has had limited showings recently. If you consider reducing the monthly price to around $2400, your potential matches could increase from 71 to ~79. This may help attract more qualified applicants and accelerate scheduling."
+0254aff7-280e-028e-ed0e-1799a1c01621,36,0,79,80,1,1500.0,"Hi! Your listing has had limited showings recently. If you consider reducing the monthly price to around $1500, your potential matches could increase from 79 to ~80. This may help attract more qualified applicants and accelerate scheduling."
+02a670a7-0f3f-7980-6fb7-074b5e7b2965,39,0,93,93,0,1100.0,
+02b4e766-49ac-9335-d2b9-dae7968f9b90,40,0,27,27,0,2900.0,
+030a303c-223a-dae0-fbe0-ab4d42a1ffb2,37,0,151,151,0,,
+036d69a0-ce51-0154-be7c-bb70695686c5,31,0,88,88,0,1900.0,
+03804b8c-392e-7edc-0088-699158afc658,39,0,94,94,0,1900.0,
+03dd3b70-eec8-0544-d8ea-13ec62bfbf5d,30,0,168,168,0,,
+0441c7e3-1b0d-8c58-4ac4-9a26ac0fdb8f,36,0,0,0,0,,
+044e9ae9-c6a7-c53d-a570-2a26b4e455ed,42,0,110,110,0,1500.0,
+07d1250b-9691-22f5-0bda-1f69a8ea755a,42,0,90,90,0,1900.0,
+08c1f1fd-b79d-0198-09b6-fcfefed6f71c,40,0,149,149,0,700.0,
+09533d7f-92d4-a0aa-bad7-7fe7171e9849,42,0,61,62,1,2900.0,"Hi! Your listing has had limited showings recently. If you consider reducing the monthly price to around $2900, your potential matches could increase from 61 to ~62. This may help attract more qualified applicants and accelerate scheduling."
+09f4618b-3551-07ad-f568-f34dd07be5ae,42,0,85,94,9,2400.0,"Hi! Your listing has had limited showings recently. If you consider reducing the monthly price to around $2400, your potential matches could increase from 85 to ~94. This may help attract more qualified applicants and accelerate scheduling."
+0a864098-f610-5e72-a152-bea6df1f0f5f,30,0,120,120,0,,
+0bb57fd9-67c7-5512-a93f-9ba81e8e0a6f,41,0,90,90,0,1900.0,
+0be3960f-d300-3ebf-7243-4ea1deae8d34,42,0,88,91,3,2400.0,"Hi! Your listing has had limited showings recently. If you consider reducing the monthly price to around $2400, your potential matches could increase from 88 to ~91. This may help attract more qualified applicants and accelerate scheduling."
+0c0f1965-af7d-469a-4b20-f107f719dfed,38,0,74,74,0,2900.0,
