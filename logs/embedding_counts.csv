@@ -3037,3 +3037,5 @@ timestamp,input_tokens,output_tokens,total_tokens,text_input
 2025-08-14T12:17:05.272779,17,0,17,"close to Central Park or subway lines, good natural light, building amenities like a gym"
 2025-08-14T12:23:34.786700,23,0,23,"modern, hardwood floors, floor-to-ceiling windows, fully equipped kitchen, gym in building, close to Central Park"
 2025-08-14T12:23:37.606163,18,0,18,"close to Central Park, near major subway lines, natural light, building amenities like a gym"
+2025-08-14T13:32:55.560306,23,0,23,"modern, hardwood floors, floor-to-ceiling windows, fully equipped kitchen, gym in the building, near Central Park"
+2025-08-14T13:32:58.440623,16,0,16,"close to Central Park or subway lines, natural light, building amenities like a gym"

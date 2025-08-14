@@ -82,10 +82,10 @@ def _build_owner_filter_for_user(user_payload: dict) -> Optional[Filter]:
         # owner bedrooms must be >= user min bedrooms
         must.append(FieldCondition(key="bedrooms", range=Range(gte=min_beds)))
 
-    # Optional: availability basic equality if provided by user
-    avail = user_payload.get("available_from")
-    if isinstance(avail, str) and avail.strip():
-        must.append(FieldCondition(key="available_from", match=MatchValue(value=avail.strip())))
+    # # Optional: availability basic equality if provided by user
+    # avail = user_payload.get("available_from")
+    # if isinstance(avail, str) and avail.strip():
+    #     must.append(FieldCondition(key="available_from", match=MatchValue(value=avail.strip())))
 
     return Filter(must=must) if must else None
 
