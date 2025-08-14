@@ -24,7 +24,7 @@ from langchain_community.callbacks.manager import get_openai_callback
 LOG_FILE = "logs/showing_llm_tokens.csv"
 init_log_file(LOG_FILE)
 
-OWNER_COLLECTION = "sampled_owner_agent_listings12-50"
+OWNER_COLLECTION = "sampled_owner_agent_listings2"
 USER_COLLECTION  = "user_agent_listings"
 
 MAX_INVITES      = 10
