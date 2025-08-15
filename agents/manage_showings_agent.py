@@ -4,7 +4,7 @@ import re
 from datetime import datetime, timezone
 from typing import List, Dict, Any, Optional
 from tqdm.auto import tqdm
-import time  # if not already imported
+import random
 
 from qdrant_client.http import exceptions as qexc
 
@@ -24,8 +24,10 @@ from langchain_community.callbacks.manager import get_openai_callback
 LOG_FILE = "logs/showing_llm_tokens.csv"
 init_log_file(LOG_FILE)
 
-OWNER_COLLECTION = "sampled_owner_agent_listings2"
+OWNER_COLLECTION =  "owner_agent_listings"
 USER_COLLECTION  = "user_agent_listings"
+SAMPLE_SIZE      = 20
+RANDOM_SEED      = 42
 
 MAX_INVITES      = 10
 MIN_CANDIDATES   = 3
@@ -252,10 +254,16 @@ def daily_llm_showing_decisions(top_k: int = 10, show_progress: bool = True) -> 
       - call LLM decision (with pre-gates)
     Returns a list of decision dicts, one per owner.
     """
-    results: List[Dict[str, Any]] = []
+    results: List[Dict[str, Any]] = []   
 
-    # Materialize owner IDs so tqdm can display total progress
-    owner_ids = list(_iter_owner_ids(owner_collection=OWNER_COLLECTION))
+
+    # sample owner IDs
+    full_owner_ids = list(_iter_owner_ids(owner_collection=OWNER_COLLECTION))
+
+    random.shuffle(full_owner_ids)
+    total = len(full_owner_ids)
+    owner_ids = full_owner_ids[:min(SAMPLE_SIZE, total)]
+
     total = len(owner_ids)
     iterator = tqdm(owner_ids, total=total, desc="ManageShowings", unit="owner") if show_progress else owner_ids
 

@@ -1,7 +1,0 @@
-owner_id,show,num,considered,mean_top5,sample,owner_application_date,owner_number_of_shows,error_type,error
-875f8fb1-faab-1f77-f5f0-a17bdf13c9ce,,,,,,,,qdrant_unexpected_response,"Unexpected Response: 400 (Bad Request)
-Raw response content:
-b'{""status"":{""error"":""Bad request: Index required but not found for \\""owner_id\\"" of one of the following types: [uuid, keyword]. Help: Create an index for this key or use a different filter.""},""time"" ...'"
-a72993d7-c1ad-3821-3880-682f205e16f5,,,,,,,,qdrant_unexpected_response,"Unexpected Response: 400 (Bad Request)
-Raw response content:
-b'{""status"":{""error"":""Bad request: Index required but not found for \\""owner_id\\"" of one of the following types: [uuid, keyword]. Help: Create an index for this key or use a different filter.""},""time"" ...'"
