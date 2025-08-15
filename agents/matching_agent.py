@@ -296,8 +296,7 @@ def _rank_in_inverse(inverse_rows: List[Dict[str, Any]], key: str, target_id: st
             return i
     return None
 
-def summarize_estimated_for_user(user_id: str, user_matches: List[Dict[str, Any]], check_top_k: int = 5) -> None:
-    # Fetch once
+def summarize_estimated_for_user(user_id: str, user_matches: List[Dict[str, Any]], check_top_k: int = 5) -> str:
     user_rec = get_point_by_id(USER_COLLECTION, user_id)
     user_payload = (user_rec.payload if user_rec else {}) or {}
 
@@ -308,14 +307,10 @@ def summarize_estimated_for_user(user_id: str, user_matches: List[Dict[str, Any]
     top1_count = 0
     top5_count = 0
     hard_fit_count = 0
-
-    # Look a bit deeper when checking rank (helps if we later slice to top5)
     RANK_WINDOW = max(50, check_top_k)
 
     for m in user_matches:
         oid = str(m["owner_id"])
-
-        # Inverse ranking: where does THIS user rank for THAT owner?
         inverse = get_matches_by_owner(oid, top_k=RANK_WINDOW)
         rank = _rank_in_inverse(inverse, key="user_id", target_id=user_id)
         if rank is not None:
@@ -323,25 +318,27 @@ def summarize_estimated_for_user(user_id: str, user_matches: List[Dict[str, Any]
                 top1_count += 1
             if rank < check_top_k:
                 top5_count += 1
-
-        # Hard attributes check
         if _hard_match(user_payload, owner_payloads.get(oid, {}) or {}):
             hard_fit_count += 1
 
-    print("=== Estimated opportunities for you ===")
-    print(f"- You appear as the #1 candidate in ~{top1_count} listing(s).")
-    print(f"- You appear in the top {check_top_k} for ~{top5_count} listing(s).")
-    print(f"- You have a strong ‘hard-attribute’ fit with ~{hard_fit_count} listing(s).")
-    print(f"- Total listings evaluated in this preview: {total_considered}")
+    lines = []
+    lines.append("=== Estimated opportunities for you ===")
+    lines.append(f"- You appear as the #1 candidate in ~{top1_count} listing(s).")
+    lines.append(f"- You appear in the top {check_top_k} for ~{top5_count} listing(s).")
+    lines.append(f"- You have a strong ‘hard-attribute’ fit with ~{hard_fit_count} listing(s).")
+    lines.append(f"- Total listings evaluated in this preview: {total_considered}")
     if user_matches:
         best = user_matches[0]
-        print(f"- Your current best score: {best.get('score', 0):.4f} (owner_id={best.get('owner_id')})")
+        lines.append(f"- Your current best score: {best.get('score', 0):.4f}")# (owner_id={best.get('owner_id')})")
+    lines.append("")
+    lines.append("Note: These are early estimates based on current matches.")
+    lines.append("Final invitations depend on scheduling, fairness (giving chances to those with fewer shows),")
+    lines.append("and listing popularity. You may not be invited to all matched properties.")
+    lines.append("")
+    return "\n".join(lines)
 
-    print("\nNote: These are early estimates based on current matches.")
-    print("Final invitations depend on scheduling, fairness (giving chances to those with fewer shows),")
-    print("and listing popularity. You may not be invited to all matched properties.\n")
 
-def summarize_estimated_for_owner(owner_id: str, owner_matches: List[Dict[str, Any]], check_top_k: int = 5) -> None:
+def summarize_estimated_for_owner(owner_id: str, owner_matches: List[Dict[str, Any]], check_top_k: int = 5) -> str:
     owner_rec = get_point_by_id(OWNER_COLLECTION, owner_id)
     owner_payload = (owner_rec.payload if owner_rec else {}) or {}
 
@@ -352,13 +349,10 @@ def summarize_estimated_for_owner(owner_id: str, owner_matches: List[Dict[str, A
     top1_count = 0
     top5_count = 0
     hard_fit_count = 0
-
     RANK_WINDOW = max(50, check_top_k)
 
     for m in owner_matches:
         uid = str(m["user_id"])
-
-        # Inverse ranking: where does THIS owner rank for THAT user?
         inverse = get_matches_by_user(uid, top_k=RANK_WINDOW)
         rank = _rank_in_inverse(inverse, key="owner_id", target_id=owner_id)
         if rank is not None:
@@ -366,20 +360,22 @@ def summarize_estimated_for_owner(owner_id: str, owner_matches: List[Dict[str, A
                 top1_count += 1
             if rank < check_top_k:
                 top5_count += 1
-
-        # Hard attributes check
         if _hard_match(user_payloads.get(uid, {}) or {}, owner_payload):
             hard_fit_count += 1
 
-    print("=== Estimated demand for your listing ===")
-    print(f"- Your listing appears as the #1 match for ~{top1_count} user(s).")
-    print(f"- Your listing appears in the top {check_top_k} for ~{top5_count} user(s).")
-    print(f"- There are ~{hard_fit_count} user(s) whose requirements strongly fit your listing.")
-    print(f"- Total users evaluated in this preview: {total_considered}")
+    lines = []
+    lines.append("=== Estimated demand for your listing ===")
+    lines.append(f"- Your listing appears as the #1 match for ~{top1_count} user(s).")
+    lines.append(f"- Your listing appears in the top {check_top_k} for ~{top5_count} user(s).")
+    lines.append(f"- There are ~{hard_fit_count} user(s) whose requirements strongly fit your listing.")
+    lines.append(f"- Total users evaluated in this preview: {total_considered}")
     if owner_matches:
         best = owner_matches[0]
-        print(f"- Best current candidate score: {best.get('score', 0):.4f} (user_id={best.get('user_id')})")
+        lines.append(f"- Best current candidate score: {best.get('score', 0):.4f}")# (user_id={best.get('user_id')})")
+    lines.append("")
+    lines.append("Note: These are early estimates to help you gauge interest.")
+    lines.append("Actual showings are scheduled by our agent considering fairness, user availability,")
+    lines.append("and platform-wide demand management.")
+    lines.append("")
+    return "\n".join(lines)
 
-    print("\nNote: These are early estimates to help you gauge interest.")
-    print("Actual showings are scheduled by our agent considering fairness, user availability,")
-    print("and platform-wide demand management.\n")

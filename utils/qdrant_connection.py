@@ -593,3 +593,120 @@ def pretty_print_listing(title: str, collection: str, pid: str):
             print(json.dumps(p.payload, indent=2, ensure_ascii=False))
     except Exception as e:
         print("  ❌ Retrieval error:", e)
+
+
+
+import datetime
+def _fmt_money(v: Any) -> str:
+    try:
+        n = float(v)
+        if n.is_integer():
+            return f"{int(n)} dollars"
+        return f"{n:.2f} dollars"
+    except Exception:
+        return "unknown"
+
+def _fmt_date(iso: Optional[str]) -> str:
+    if not iso:
+        return "unknown date"
+    try:
+        # handle either date or datetime iso strings
+        try:
+            dt = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+        except Exception:
+            dt = datetime.strptime(iso, "%Y-%m-%d")
+        return dt.strftime("%B %d, %Y")
+    except Exception:
+        return iso
+
+def _first_or_unknown(seq) -> str:
+    if isinstance(seq, list) and seq:
+        return str(seq[0])
+    if isinstance(seq, str) and seq:
+        return seq
+    return "unknown"
+
+def _safe(payload: Optional[Dict[str, Any]], key: str, default="unknown"):
+    if not payload:
+        return default
+    val = payload.get(key)
+    if val is None or val == "":
+        return default
+    return val
+
+def summarize_shows_text(filtered_results: List[Dict[str, Any]]) -> str:
+    """
+    Build a human-friendly summary of scheduled shows.
+    Expects the results list already filtered to show == '1' and limited by max_invites.
+    Each result item should contain:
+        - owner_id
+        - decision: {'show': '1', 'num': '<int>'}
+        - owner_profile (optional snapshot with 'number_of_shows', 'application_date')
+    We fetch listing payload from OWNER_COLLECTION to display state/bedrooms/price.
+    """
+    shows = []
+    for r in filtered_results:
+        dec = r.get("decision") or {}
+        if str(dec.get("show", "0")) != "1":
+            continue
+
+        owner_id = str(r.get("owner_id"))
+        num_invites = 0
+        try:
+            num_invites = int(dec.get("num", 0))
+        except Exception:
+            num_invites = 0
+
+        # Pull owner profile (contact) and listing payload (hard attrs)
+        profile = get_owner_profile(owner_id) or {}
+        listing_rec = get_point_by_id(OWNER_COLLECTION, owner_id)
+        listing = (listing_rec.payload if listing_rec else {}) or {}
+
+        name  = _safe(profile, "full_name")
+        phone = _safe(profile, "phone")
+        email = _safe(profile, "email")
+
+        # Your schema calls it "state" (list), "num_bedrooms", "price"
+        city_state = _first_or_unknown(listing.get("state"))
+        bedrooms   = _safe(listing, "bedrooms")
+        price      = _fmt_money(_safe(listing, "price", None))
+
+        # fairness / meta
+        # prefer snapshot carried by run_daily_decisions; fallback to live profile
+        fair = r.get("owner_profile") or {}
+        shows_count = _safe(fair, "number_of_shows", _safe(profile, "number_of_shows", 0))
+        app_date    = _fmt_date(_safe(fair, "application_date", profile.get("application_date")))
+
+        shows.append({
+            "owner_id": owner_id,
+            "name": name,
+            "phone": phone,
+            "email": email,
+            "city_state": city_state,
+            "bedrooms": bedrooms,
+            "price": price,
+            "shows_count": shows_count,
+            "app_date": app_date,
+            "num_invites": num_invites,
+        })
+
+    if not shows:
+        return "There are 0 shows to schedule for you at this time."
+
+    lines = []
+    lines.append(f"there will be {len(shows)} show{'s' if len(shows)!=1 else ''} that we will schedule for you :")
+    for i, s in enumerate(shows, start=1):
+        lines.append(f"")
+        lines.append(f"show {i} :")
+        lines.append(
+            f"owner: {s['name']}, {s['phone']} , {s['email']}, "
+            f"{s['city_state']}, {s['bedrooms']} bed rooms , {s['price']}, "
+            f"have been shown {s['shows_count']} time{'s' if str(s['shows_count'])!='1' else ''}. "
+            f"have been applicant to the system at {s['app_date']}.."
+        )
+        lines.append(
+            f"an invitaion mail will be sent to you, the owner and the {s['num_invites']} matched user"
+            f"{'' if s['num_invites']==1 else 's'}."
+        )
+    lines.append("")
+    return "\n".join(lines)

@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from typing import List, Dict, Any, Optional
 from tqdm.auto import tqdm
 import random
+import os , csv
 
 from qdrant_client.http import exceptions as qexc
 
@@ -26,10 +27,9 @@ init_log_file(LOG_FILE)
 
 OWNER_COLLECTION =  "owner_agent_listings"
 USER_COLLECTION  = "user_agent_listings"
-SAMPLE_SIZE      = 20
 RANDOM_SEED      = 42
 
-MAX_INVITES      = 10
+MAX_INVITES      = 20
 MIN_CANDIDATES   = 3
 QUALITY_GATE     = 0.45   # mean(top5) threshold
 
@@ -244,7 +244,7 @@ def decide_showing_for_owner(
 # Daily loop (Function 2)
 # ======================================================
 
-def daily_llm_showing_decisions(top_k: int = 10, show_progress: bool = True) -> List[Dict[str, Any]]:
+def daily_llm_showing_decisions(top_k: int = 10, show_progress: bool = True, max_invites: int = MAX_INVITES) -> List[Dict[str, Any]]:
     """
     Loop all owner listings (from OWNER_COLLECTION):
       - retrieve owner payload
@@ -256,13 +256,12 @@ def daily_llm_showing_decisions(top_k: int = 10, show_progress: bool = True) -> 
     """
     results: List[Dict[str, Any]] = []   
 
-
     # sample owner IDs
     full_owner_ids = list(_iter_owner_ids(owner_collection=OWNER_COLLECTION))
 
     random.shuffle(full_owner_ids)
     total = len(full_owner_ids)
-    owner_ids = full_owner_ids[:min(SAMPLE_SIZE, total)]
+    owner_ids = full_owner_ids[:min(max_invites, total)]
 
     total = len(owner_ids)
     iterator = tqdm(owner_ids, total=total, desc="ManageShowings", unit="owner") if show_progress else owner_ids
@@ -348,3 +347,49 @@ def daily_llm_showing_decisions(top_k: int = 10, show_progress: bool = True) -> 
                 iterator.set_postfix_str("error=generic")
 
     return results
+
+
+def run_daily_decisions(max_invites: int = MAX_INVITES):
+    results = daily_llm_showing_decisions(top_k=10, show_progress=True, max_invites=max_invites)
+
+    # Filter: only show == 1
+    filtered_results = [
+        r for r in results
+        if not r.get("error") and (r.get("decision") or {}).get("show") == "1"
+    ]
+
+    # Limit to max_invites
+    filtered_results = filtered_results[:max_invites]
+
+    # Keep CSV tidy: only write selected columns
+    fieldnames = [
+        "owner_id", "show", "num", "considered", "mean_top5",
+        "sample", "owner_application_date", "owner_number_of_shows",
+        "error_type", "error"
+    ]
+    out_path = f"logs/showings_decisions_{datetime.now().strftime('%Y%m%d-%H%M%S')}.csv"
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+
+    with open(out_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames)
+        w.writeheader()
+        for r in filtered_results:
+            dec = r.get("decision", {}) or {}
+            own = r.get("owner_profile", {}) or {}
+            w.writerow({
+                "owner_id": r.get("owner_id"),
+                "show": dec.get("show"),
+                "num": dec.get("num"),
+                "considered": r.get("considered"),
+                "mean_top5": r.get("mean_top5"),
+                "sample": r.get("sample"),
+                "owner_application_date": own.get("application_date"),
+                "owner_number_of_shows": own.get("number_of_shows"),
+                "error_type": r.get("error_type"),
+                "error": r.get("error"),
+            })
+
+    print(f"✅ Done. {len(filtered_results)} owners processed (all show == 1). CSV → {out_path}")
+    return filtered_results, out_path
+
+
