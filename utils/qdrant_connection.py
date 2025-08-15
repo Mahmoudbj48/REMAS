@@ -6,7 +6,7 @@ import random
 import time
 import hashlib
 from tqdm.auto import tqdm
-
+import json
 
 
 
@@ -542,3 +542,54 @@ def organize_dataset_after_showings(
 
     return summary
 
+
+## ---- display user and owner listings ----
+def hyphenate_uuid32(s: str) -> str:
+    s = s.strip()
+    return f"{s[0:8]}-{s[8:12]}-{s[12:16]}-{s[16:20]}-{s[20:32]}" if len(s) == 32 else s
+
+def dehyphenate_uuid(s: str) -> str:
+    s = s.strip()
+    return s.replace("-", "") if "-" in s and len(s.replace("-", "")) == 32 else s
+
+def retrieve_by_id(collection: str, pid: str):
+    """
+    Try retrieve with the given ID. If not found, try alternate UUID formatting.
+    Returns a list of points (each with 'payload' if exists).
+    """
+    if not pid:
+        return []
+    # attempt 1: as-is
+    got = client.retrieve(collection_name=collection, ids=[pid], with_payload=True, with_vectors=False)
+    if got:
+        return got
+    # attempt 2: hyphenate 32-hex
+    pid2 = hyphenate_uuid32(pid)
+    if pid2 != pid:
+        got = client.retrieve(collection_name=collection, ids=[pid2], with_payload=True, with_vectors=False)
+        if got:
+            return got
+    # attempt 3: de-hyphenate
+    pid3 = dehyphenate_uuid(pid)
+    if pid3 != pid and pid3 != pid2:
+        got = client.retrieve(collection_name=collection, ids=[pid3], with_payload=True, with_vectors=False)
+        if got:
+            return got
+    return []
+
+def pretty_print_listing(title: str, collection: str, pid: str):
+    print(f"\n🔎 {title} (collection='{collection}', id='{pid}')")
+    if not pid:
+        print("  ⛔ No ID to retrieve (None).")
+        return
+    try:
+        points = retrieve_by_id(collection, pid)
+        if not points:
+            print("  ⚠️ Not found.")
+            return
+        for p in points:
+            # p.payload contains your saved fields
+            print("  ✅ Found point:")
+            print(json.dumps(p.payload, indent=2, ensure_ascii=False))
+    except Exception as e:
+        print("  ❌ Retrieval error:", e)

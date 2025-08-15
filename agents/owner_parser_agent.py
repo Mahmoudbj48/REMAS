@@ -25,7 +25,7 @@ Your task is to:
 Return JSON in the following format:
 {
   "hard_attributes": {
-    "state": ["Astoria", "Queens"],
+    "state": ["New York", "San Francisco"],
     "picture_url": "https://example.com/image.jpg",
     "price": 2300,
     "num_bedrooms": 2,
@@ -42,6 +42,7 @@ Note:
 Output rules:
 - If the input is not about a property listing, output only: null
 - Return ONLY valid JSON (no backticks, no explanations).
+- **hard_attributes.state must be matched exactly to one or more of these five allowed values:** ["New York", "San Francisco", "Los Angeles", "Chicago", "Miami"]
 - Types must match exactly:
   - hard_attributes.state: array of strings (always an array, even if one value)
   - hard_attributes.price: number (monthly USD). If a range is given, use the asking price; if unclear, use null.

@@ -27,7 +27,7 @@ Your task is to:
 Return JSON in the following format (keys and types must match the owner schema):
 {
   "hard_attributes": {
-    "state": ["Brooklyn", "Queens"],
+    "state": ["New York", "San Francisco"],
     "picture_url": null,
     "price": 2000,
     "num_bedrooms": 2,
@@ -45,6 +45,7 @@ Notes:
 Output rules:
 - If the input is not about a property search, output only: null
 - Return ONLY valid JSON (no backticks, no explanations).
+- **hard_attributes.state must be matched exactly to one or more of these five allowed values:** ["New York", "San Francisco", "Los Angeles", "Chicago", "Miami"]
 - Use the SAME keys and types as owner listings:
   - hard_attributes.state: array of strings (areas/regions mentioned)
   - hard_attributes.picture_url: null
