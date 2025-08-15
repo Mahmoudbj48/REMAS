@@ -43,6 +43,7 @@ Notes:
 - Interpret 'price' as the user's maximum budget and 'num_bedrooms' as the minimum bedrooms desired.
 
 Output rules:
+- If the input is not about a property search, output only: null
 - Return ONLY valid JSON (no backticks, no explanations).
 - Use the SAME keys and types as owner listings:
   - hard_attributes.state: array of strings (areas/regions mentioned)

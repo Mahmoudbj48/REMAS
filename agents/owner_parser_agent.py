@@ -40,6 +40,7 @@ Note:
 - If a field is missing or unclear, use null.
 
 Output rules:
+- If the input is not about a property listing, output only: null
 - Return ONLY valid JSON (no backticks, no explanations).
 - Types must match exactly:
   - hard_attributes.state: array of strings (always an array, even if one value)
