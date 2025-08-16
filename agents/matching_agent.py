@@ -326,10 +326,7 @@ def summarize_estimated_for_user(user_id: str, user_matches: List[Dict[str, Any]
     lines.append(f"- You appear as the #1 candidate in ~{top1_count} listing(s).")
     lines.append(f"- You appear in the top {check_top_k} for ~{top5_count} listing(s).")
     lines.append(f"- You have a strong ‘hard-attribute’ fit with ~{hard_fit_count} listing(s).")
-    lines.append(f"- Total listings evaluated in this preview: {total_considered}")
-    if user_matches:
-        best = user_matches[0]
-        lines.append(f"- Your current best score: {best.get('score', 0):.4f}")# (owner_id={best.get('owner_id')})")
+
     lines.append("")
     lines.append("Note: These are early estimates based on current matches.")
     lines.append("Final invitations depend on scheduling, fairness (giving chances to those with fewer shows),")
@@ -368,10 +365,7 @@ def summarize_estimated_for_owner(owner_id: str, owner_matches: List[Dict[str, A
     lines.append(f"- Your listing appears as the #1 match for ~{top1_count} user(s).")
     lines.append(f"- Your listing appears in the top {check_top_k} for ~{top5_count} user(s).")
     lines.append(f"- There are ~{hard_fit_count} user(s) whose requirements strongly fit your listing.")
-    lines.append(f"- Total users evaluated in this preview: {total_considered}")
-    if owner_matches:
-        best = owner_matches[0]
-        lines.append(f"- Best current candidate score: {best.get('score', 0):.4f}")# (user_id={best.get('user_id')})")
+    
     lines.append("")
     lines.append("Note: These are early estimates to help you gauge interest.")
     lines.append("Actual showings are scheduled by our agent considering fairness, user availability,")

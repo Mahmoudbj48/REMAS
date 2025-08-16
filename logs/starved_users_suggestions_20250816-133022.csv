@@ -1,0 +1,423 @@
+user_id,days_since_application,number_of_shows,baseline_matches,relax_bedrooms_minus_matches,delta_bedrooms,suggested_bedrooms,bedrooms_message,relax_budget_plus_matches,delta_budget,suggested_budget,budget_message
+0025d524-935f-6e94-0e53-ee262d848ce6,39,1,61,62,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 61 to ~62. This small adjustment might improve your chances of getting invited to a showing.",61,0,3200.0,
+0052d54b-39dc-bc06-adb5-38eb13efeac0,35,0,60,60,0,0,,60,0,,
+00c74781-0965-898f-4d9b-81d17f64ee9e,36,0,73,73,0,0,,73,0,,
+00fcfe9b-c638-a209-7f53-a39bba1b4453,37,0,46,46,0,0,,46,0,3200.0,
+0162c285-27a9-a69c-d7c1-39ba228be89c,34,0,10,10,0,0,,10,0,1400.0,
+01716881-aa94-41df-6007-e903377f7c91,36,0,71,71,0,0,,71,0,,
+01960127-2a25-6c16-d5ac-23d20a0881b2,35,0,49,49,0,0,,49,0,,
+02543539-fea9-19fd-d10d-3bfe6d0b1279,42,0,60,60,0,0,,60,0,,
+026b0e62-46cd-0bd9-00f1-9ecf400f1902,41,1,46,46,0,0,,46,0,,
+02d2cc3a-23b3-0361-776c-0480c369f2d6,33,0,7,24,17,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 7 to ~24. This small adjustment might improve your chances of getting invited to a showing.",7,0,2600.0,
+031c6fe9-744d-3c94-196e-48997db0d8f2,37,0,0,4,4,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 0 to ~4. This small adjustment might improve your chances of getting invited to a showing.",0,0,1400.0,
+0422535c-58ad-ac69-c236-1dec59b11dd1,38,0,36,36,0,0,,42,6,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 36 to ~42. This may help you receive more viewing invitations."
+04c554a1-8770-b58b-df8e-d9c1c2b056a9,46,0,61,62,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 61 to ~62. This small adjustment might improve your chances of getting invited to a showing.",61,0,,
+05133baa-8b08-4104-16f6-8a48535a9f51,44,0,61,61,0,0,,61,0,,
+05553f9b-6d2c-f800-61e7-cc2bc834aa94,41,0,5,5,0,0,,5,0,1000.0,
+061a4fdd-c287-ea50-282b-3fb79fbfd1f3,30,1,55,55,0,0,,55,0,3200.0,
+080c466d-909f-15d1-6069-f5a2c0633853,36,0,7,7,0,0,,7,0,1400.0,
+08aa3a72-4325-b3f0-2506-50e514345189,39,0,58,58,0,0,,58,0,,
+097a26be-7d8d-ed04-2cb7-3e7e3f2ba0f4,39,0,47,47,0,0,,47,0,2700.0,
+0aa83f88-5fb8-2c57-1b68-3bb50042f9f2,39,0,16,64,48,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 16 to ~64. This small adjustment might improve your chances of getting invited to a showing.",16,0,,
+0c91e7db-1f55-95d2-2c41-8b7e3ff1e026,37,0,37,37,0,0,,45,8,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 37 to ~45. This may help you receive more viewing invitations."
+0de8f5a1-0417-ebc8-08f8-e28c8413d34b,40,0,59,59,0,0,,59,0,2700.0,
+0ebe37ac-c5ac-1c90-9601-d12f03a526f2,41,0,8,43,35,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 8 to ~43. This small adjustment might improve your chances of getting invited to a showing.",8,0,2700.0,
+0fe2ba33-67a9-52b2-023a-fb3f04c2467f,41,0,46,46,0,0,,59,13,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 46 to ~59. This may help you receive more viewing invitations."
+10378c49-cb85-67b9-453c-fa65568b2fc1,36,1,15,15,0,0,,15,0,1400.0,
+10897f69-d8ec-5d8d-51b7-e3db8c25e40e,42,0,44,44,0,0,,44,0,2700.0,
+112bdea1-e113-4582-57b5-ede3c9fbfa22,42,0,54,54,0,0,,54,0,2700.0,
+11860e20-683e-fda9-5f1b-964daf2c43c5,33,0,2,5,3,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 2 to ~5. This small adjustment might improve your chances of getting invited to a showing.",2,0,1000.0,
+119b7ca1-faa8-bf3b-cb48-39b8fc8678c2,32,0,12,12,0,0,,12,0,1400.0,
+13a820e9-ec61-16a7-efbe-9ab687594fd1,46,0,29,29,0,0,,38,9,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 29 to ~38. This may help you receive more viewing invitations."
+145127b7-e0f1-534f-85ae-cb4f1dd260c8,31,1,51,51,0,0,,51,0,2700.0,
+164ee6d7-470c-f824-88b2-092d47c8124d,34,0,8,8,0,0,,8,0,1400.0,
+16d86a17-99da-815b-dd68-a5d9c229d626,41,0,4,7,3,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 4 to ~7. This small adjustment might improve your chances of getting invited to a showing.",4,0,2200.0,
+199c2b60-8897-f863-01b1-57bfa9824fcf,37,0,24,58,34,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 24 to ~58. This small adjustment might improve your chances of getting invited to a showing.",24,0,,
+199cc1ff-e471-eea1-ab78-807dcb9ebcab,42,0,50,50,0,0,,50,0,,
+19e9de8b-f46d-15cb-ae4a-7dc5ae7f0815,46,0,55,55,0,0,,55,0,2700.0,
+19f720b8-283f-6ef2-c741-9fd4b7e43aa9,39,0,20,53,33,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 20 to ~53. This small adjustment might improve your chances of getting invited to a showing.",20,0,2700.0,
+1ab700a0-5c68-6d77-4b8e-b14f14927173,33,0,1,7,6,4,"Hi! We noticed your application has had limited opportunities. If you can consider places with 4 bedroom(s), your potential matches could increase from 1 to ~7. This small adjustment might improve your chances of getting invited to a showing.",1,0,,
+1afe4ec9-c891-53f2-42cf-ac622c2bfd7f,41,0,61,61,0,0,,61,0,3200.0,
+1b3dafdd-c068-5a4a-a23c-9734244b4af8,45,1,14,60,46,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 14 to ~60. This small adjustment might improve your chances of getting invited to a showing.",14,0,3200.0,
+1be795f1-5116-afdf-5562-2e7821cd10c5,45,0,56,56,0,0,,56,0,,
+1c436962-8cf4-709f-b4cc-6975cabd07dd,45,0,11,11,0,0,,11,0,1400.0,
+1d106037-8b71-de31-685e-779958859bd1,41,1,59,60,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 59 to ~60. This small adjustment might improve your chances of getting invited to a showing.",65,6,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 59 to ~65. This may help you receive more viewing invitations."
+1d68208f-0718-7a20-2564-928f16db2a59,33,0,2,10,8,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 2 to ~10. This small adjustment might improve your chances of getting invited to a showing.",2,0,,
+1e40f8a0-a69f-ab66-f61f-85fe66d3f641,33,0,17,51,34,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 17 to ~51. This small adjustment might improve your chances of getting invited to a showing.",17,0,3200.0,
+1f56da48-6ebc-00ca-d37a-0cc18834e60a,45,0,12,55,43,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 12 to ~55. This small adjustment might improve your chances of getting invited to a showing.",12,0,2700.0,
+1fd3d90a-1b59-ba85-defd-a749cfb80e0e,46,0,5,16,11,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 5 to ~16. This small adjustment might improve your chances of getting invited to a showing.",5,0,2700.0,
+1fe12c05-9d2d-038c-aee0-e2d85cc54f47,43,0,54,54,0,0,,54,0,,
+221550e9-bbd1-c264-4b32-de6530ff1c78,30,0,20,58,38,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 20 to ~58. This small adjustment might improve your chances of getting invited to a showing.",20,0,,
+221cf2ac-3db2-5059-a61d-99ebeee0f0fd,46,0,34,34,0,0,,41,7,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 34 to ~41. This may help you receive more viewing invitations."
+224529ec-9392-3531-9732-be84c937227a,35,0,19,67,48,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 19 to ~67. This small adjustment might improve your chances of getting invited to a showing.",19,0,,
+23b7d142-b8e4-7d86-d75b-7e05fc4303f3,30,0,22,22,0,0,,32,10,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 22 to ~32. This may help you receive more viewing invitations."
+23ccaed8-18b6-c297-bcd5-b8227964167c,39,0,3,7,4,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 3 to ~7. This small adjustment might improve your chances of getting invited to a showing.",3,0,,
+2470d55d-8628-db37-45f5-fbfa7a01bae1,39,0,52,52,0,0,,52,0,3400.0,
+24aa8aaa-ddce-3c59-6c41-3a245c121c08,41,0,3,3,0,0,,3,0,1000.0,
+251def9b-2c59-8c1c-85a5-87049bf185c3,46,0,15,51,36,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 15 to ~51. This small adjustment might improve your chances of getting invited to a showing.",15,0,,
+253704a5-0e87-ef7b-8e0e-75f7090d706c,33,0,52,52,0,0,,56,4,2500.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2500 per month, your potential matches could increase from 52 to ~56. This may help you receive more viewing invitations."
+2623bdd2-2f3e-cb6f-34c3-638000b86f57,46,0,37,37,0,0,,43,6,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 37 to ~43. This may help you receive more viewing invitations."
+271ddb91-801f-3dc3-6562-f7298f506072,40,0,1,4,3,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 1 to ~4. This small adjustment might improve your chances of getting invited to a showing.",1,0,1400.0,
+2724fdd7-7d74-d268-af3e-8bdb122b9976,30,0,6,6,0,0,,6,0,1000.0,
+277daeb1-27af-3231-a365-36bf1e748677,41,0,60,60,0,0,,60,0,,
+286e68b6-327c-f007-d64f-7f4c0eb45e69,30,0,51,51,0,0,,51,0,3200.0,
+2910eefb-a16d-e347-54d2-695b69943409,41,1,50,50,0,0,,50,0,2700.0,
+29e236db-6553-6de9-cb0a-9de33d269f76,37,0,51,52,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 51 to ~52. This small adjustment might improve your chances of getting invited to a showing.",51,0,2700.0,
+2a03fc5a-4ddd-56fe-d6fe-4451daaa43d3,31,0,0,5,5,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 0 to ~5. This small adjustment might improve your chances of getting invited to a showing.",0,0,1000.0,
+2a806e38-909a-f7a6-0e22-ccee70fe2ad5,37,0,6,27,21,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 6 to ~27. This small adjustment might improve your chances of getting invited to a showing.",11,5,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 6 to ~11. This may help you receive more viewing invitations."
+2b0bef78-a335-058d-15f7-e0c2d645fd01,38,0,4,10,6,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 4 to ~10. This small adjustment might improve your chances of getting invited to a showing.",4,0,2600.0,
+2c41651a-e771-9b48-bb5e-f88614b2ac31,43,0,7,17,10,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 7 to ~17. This small adjustment might improve your chances of getting invited to a showing.",10,3,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 7 to ~10. This may help you receive more viewing invitations."
+2ca34f6a-3a68-d047-1dd1-c60a2a4247d1,33,0,43,43,0,0,,54,11,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 43 to ~54. This may help you receive more viewing invitations."
+2ca4f8b5-cc9b-b810-1cd7-0344ac6bd8ff,37,0,28,28,0,0,,38,10,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 28 to ~38. This may help you receive more viewing invitations."
+2d6326e5-7a55-560c-c5e6-d3b69507a06f,36,0,62,62,0,0,,62,0,,
+2e53cbbc-b19a-8829-d100-4552a505e370,37,1,24,24,0,0,,36,12,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 24 to ~36. This may help you receive more viewing invitations."
+2f2502d0-caaa-c37c-3352-16c1627fc925,46,0,20,71,51,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 20 to ~71. This small adjustment might improve your chances of getting invited to a showing.",20,0,,
+3066647b-75b6-5e7c-6a0e-c1c064b14bcf,42,0,61,61,0,0,,61,0,3200.0,
+31436050-65d4-cc13-77fc-2cb8876a4ce4,38,0,61,61,0,0,,61,0,,
+322af01b-1077-77ad-98d9-c1b1f5ee21d5,44,0,53,53,0,0,,53,0,,
+325fad42-8a92-ffef-b0e1-ac14412935b2,39,0,17,69,52,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 17 to ~69. This small adjustment might improve your chances of getting invited to a showing.",17,0,,
+3390e2cb-8129-f3d4-72e7-7c7628b934cd,46,0,73,73,0,0,,73,0,,
+33f84ed5-a114-4df9-6e43-27dcd1f809f2,43,0,25,58,33,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 25 to ~58. This small adjustment might improve your chances of getting invited to a showing.",25,0,2600.0,
+3443c56c-4b82-996b-7ae9-1529e441a150,35,0,56,56,0,0,,56,0,,
+36d933bd-1c82-afa6-be65-637046f8182e,39,0,26,56,30,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 26 to ~56. This small adjustment might improve your chances of getting invited to a showing.",26,0,2600.0,
+36f8a29b-1a2e-b5da-799f-7bb10c49bc41,40,1,27,27,0,0,,37,10,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 27 to ~37. This may help you receive more viewing invitations."
+37113c46-3f74-25f2-9968-1e85b20ae49b,41,0,66,67,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 66 to ~67. This small adjustment might improve your chances of getting invited to a showing.",66,0,3200.0,
+381c844f-416b-b40c-6fa9-b0817646b8ac,46,0,66,66,0,0,,66,0,,
+38d356b0-4662-26d7-602c-6077218094f9,31,0,1,15,14,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 1 to ~15. This small adjustment might improve your chances of getting invited to a showing.",1,0,1400.0,
+39d67fa9-0864-9963-04ee-96e083f6108f,37,0,42,42,0,0,,42,0,3200.0,
+3a4685e4-92dc-3690-6b50-6eae2ffea8df,35,0,40,40,0,0,,45,5,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 40 to ~45. This may help you receive more viewing invitations."
+3b3ae42f-ef56-0fab-b62b-f94dde56eaeb,34,0,62,62,0,0,,62,0,,
+3bb6b430-e7fb-8191-4af7-8d88374688f4,31,0,75,75,0,0,,75,0,,
+3c412d55-fa8c-5afe-49f2-9206ac9d3814,45,0,2,10,8,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 2 to ~10. This small adjustment might improve your chances of getting invited to a showing.",2,0,,
+3c44db19-c25a-2657-28f9-168b7a80fe67,31,0,60,60,0,0,,60,0,,
+3d375300-7a84-d23f-01c2-7ea718130fc3,40,0,20,67,47,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 20 to ~67. This small adjustment might improve your chances of getting invited to a showing.",20,0,,
+3d4e5178-3baa-dfc1-929a-d3f84f5d1a26,32,0,63,63,0,0,,63,0,,
+3db3540a-e971-7228-92e1-05772a8be7f0,33,0,0,0,0,4,,0,0,1000.0,
+3dd2baaf-c24a-d410-70b6-9fc024cfcce8,37,0,55,55,0,0,,55,0,,
+3e0dd798-c605-c53f-1eb8-1286804142a1,41,1,38,38,0,0,,40,2,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 38 to ~40. This may help you receive more viewing invitations."
+3ec40b2e-cc68-7038-ac96-fd046d5538f7,31,0,35,35,0,0,,46,11,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 35 to ~46. This may help you receive more viewing invitations."
+3ffa8dae-7ceb-7c09-fa6a-9b1c293c176a,35,1,54,54,0,0,,62,8,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 54 to ~62. This may help you receive more viewing invitations."
+3fffab5c-2458-48f4-3805-762b3a47996b,42,0,56,56,0,0,,56,0,,
+400f1308-7984-87da-56b2-6d7ad025ee1d,44,0,14,14,0,0,,14,0,1400.0,
+4045bf9f-f375-238a-3341-97bdbc0ac33f,36,0,25,25,0,0,,30,5,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 25 to ~30. This may help you receive more viewing invitations."
+41df110a-5f77-4760-9e5d-a97451e5e79d,38,0,57,57,0,0,,57,0,,
+42dc219e-0807-aae3-3a27-5d256929e060,44,1,12,55,43,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 12 to ~55. This small adjustment might improve your chances of getting invited to a showing.",12,0,3200.0,
+4392ceda-a003-f133-f4f7-f415a3464d2d,44,0,14,63,49,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 14 to ~63. This small adjustment might improve your chances of getting invited to a showing.",14,0,,
+43f16151-fca0-bb81-39cc-228bf67a0ccc,38,0,51,51,0,0,,51,0,,
+4610e882-be07-6b7a-f543-be7dcb0afe00,35,1,67,67,0,0,,67,0,,
+4656b005-637f-7f6c-d47a-5c26010afc4d,39,0,1,1,0,5,,1,0,,
+46e6e1b9-ce7d-577e-68d6-14f8d17d90f5,41,0,55,55,0,0,,55,0,2700.0,
+47dc53ff-ff0b-0066-cfa8-da83d5b30bd0,31,0,69,69,0,0,,69,0,2700.0,
+4977e772-2321-f3e0-d9ce-d8ee6e6a7363,34,0,29,29,0,0,,36,7,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 29 to ~36. This may help you receive more viewing invitations."
+49ea5f5a-3cb7-0168-c4e1-d658fce13b92,40,0,6,11,5,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 6 to ~11. This small adjustment might improve your chances of getting invited to a showing.",6,0,2700.0,
+4a01ea6f-28ea-62b1-3e30-969c77ad94e9,40,1,23,23,0,0,,31,8,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 23 to ~31. This may help you receive more viewing invitations."
+4a54afcb-277c-8d4a-6ce5-0d1eac7df323,46,0,40,40,0,0,,44,4,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 40 to ~44. This may help you receive more viewing invitations."
+4ae3679b-2252-23a7-3f4e-e99889339a43,43,0,36,36,0,0,,41,5,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 36 to ~41. This may help you receive more viewing invitations."
+4af6116d-4fc4-5b4b-b85f-dd318cc8569d,45,0,18,37,19,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 18 to ~37. This small adjustment might improve your chances of getting invited to a showing.",23,5,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 18 to ~23. This may help you receive more viewing invitations."
+4bceb268-f5f3-fbfd-8220-ebfbf9810d15,36,0,52,52,0,0,,52,0,2700.0,
+4cbbb51d-a7e7-bd64-5536-deb91e1d7c9a,45,0,65,65,0,0,,65,0,,
+4dbe89b1-e0b5-b57b-6ff1-84dcd353db4a,45,0,25,80,55,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 25 to ~80. This small adjustment might improve your chances of getting invited to a showing.",25,0,,
+4eae443e-b83a-bd7d-fb63-9cefe3c11c01,46,0,22,22,0,0,,32,10,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 22 to ~32. This may help you receive more viewing invitations."
+4f0969f2-86c5-b4e1-10c3-7560db93f024,43,1,58,58,0,0,,58,0,2700.0,
+4f2f757b-e8bb-55e0-9566-4601a4c60c7e,36,0,60,60,0,0,,60,0,,
+50a3f33d-a514-0825-905b-2e5093ee47df,37,0,34,34,0,0,,42,8,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 34 to ~42. This may help you receive more viewing invitations."
+51e16942-a557-0081-8541-a2843525ddb0,41,0,4,4,0,0,,4,0,1000.0,
+52699227-8f6c-3ede-8617-f71e0597e5bb,40,0,26,62,36,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 26 to ~62. This small adjustment might improve your chances of getting invited to a showing.",26,0,3200.0,
+5295653f-c1ea-4bca-4530-9569342b8dcb,30,0,5,5,0,0,,5,0,1000.0,
+529565c0-b58b-6bd4-5cf1-11f1da80db04,41,0,61,61,0,0,,61,0,2700.0,
+539883eb-ff87-bf45-17d6-f0d6540e2f53,37,0,56,56,0,0,,56,0,,
+53ea430c-d299-aeb1-e401-0f688c943ccd,39,0,68,69,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 68 to ~69. This small adjustment might improve your chances of getting invited to a showing.",68,0,,
+54564a31-493b-d8ab-e5aa-4124daa078fa,36,0,2,3,1,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 2 to ~3. This small adjustment might improve your chances of getting invited to a showing.",2,0,1000.0,
+5461282e-174d-7985-6029-f142e29538ce,36,0,21,45,24,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 21 to ~45. This small adjustment might improve your chances of getting invited to a showing.",21,0,2600.0,
+54661865-ca28-46bf-42ed-517dff02a03a,39,0,54,54,0,0,,54,0,2700.0,
+54b8125a-28e8-b262-5b05-264217e81ef1,45,0,30,30,0,0,,42,12,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 30 to ~42. This may help you receive more viewing invitations."
+54f23bb3-e9da-f336-6347-15ce9d2c0ea8,36,0,2,9,7,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 2 to ~9. This small adjustment might improve your chances of getting invited to a showing.",2,0,,
+555d7ce3-3bc8-37a3-045e-fe999c55f418,41,0,55,55,0,0,,55,0,,
+55f7a679-3cc7-aba1-3173-a00cc3e8088a,37,0,8,8,0,0,,8,0,1000.0,
+56cb860c-12b6-f075-cc23-87cf16c3ec52,44,0,4,4,0,0,,4,0,1000.0,
+56e99773-9539-ab49-8269-c4f563e95047,31,0,1,4,3,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 1 to ~4. This small adjustment might improve your chances of getting invited to a showing.",1,0,,
+5771e0f7-d912-7ef1-c2c6-83c5370b3f06,41,0,14,55,41,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 14 to ~55. This small adjustment might improve your chances of getting invited to a showing.",14,0,,
+5784655d-ec4d-9b66-7f54-461b2afae753,34,0,64,64,0,0,,64,0,3200.0,
+5801f695-2094-45e8-3082-3606db7ac1bc,34,0,56,56,0,0,,56,0,,
+584757e2-c380-0e8b-9281-556f7327a935,38,0,11,11,0,0,,11,0,1400.0,
+5878f431-f6f9-843d-5357-863f32d104a0,39,0,13,71,58,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 13 to ~71. This small adjustment might improve your chances of getting invited to a showing.",13,0,,
+594c184e-3fad-ff54-432d-c74dcd225ab5,32,0,76,76,0,0,,76,0,,
+59b3ca9c-5269-b06a-3fd8-255fe6261a49,46,0,52,52,0,0,,52,0,,
+59ff318c-c243-147f-d453-d6d96cfbf38a,42,0,69,70,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 69 to ~70. This small adjustment might improve your chances of getting invited to a showing.",69,0,3200.0,
+5a1c2cd7-744f-1130-8a1a-ae773f98bcbc,39,0,13,13,0,0,,13,0,1400.0,
+5a740b11-8b2a-e9ea-14c9-f2e34bf743cd,43,0,55,55,0,0,,55,0,3200.0,
+5aa7eba0-e57f-e2c7-d55e-a01ff618c805,32,1,48,48,0,0,,48,0,2700.0,
+5abda013-352b-f55b-013e-095906535e74,30,0,70,70,0,0,,70,0,,
+5b6a0940-970f-3a34-06d0-5ad0422eb07d,33,0,75,75,0,0,,75,0,,
+5bf5643e-489a-e2e2-4f79-aed3a9f61cc2,41,0,8,16,8,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 8 to ~16. This small adjustment might improve your chances of getting invited to a showing.",8,0,,
+5c752a8d-9bbb-23e9-fc8e-5401f36c8c5a,43,0,8,35,27,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 8 to ~35. This small adjustment might improve your chances of getting invited to a showing.",10,2,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 8 to ~10. This may help you receive more viewing invitations."
+5d9ea0c4-6c81-8566-8c48-cade0609a513,34,0,15,53,38,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 15 to ~53. This small adjustment might improve your chances of getting invited to a showing.",15,0,,
+5e3a08a8-15a7-254f-e9db-62de1825f865,33,0,11,18,7,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 11 to ~18. This small adjustment might improve your chances of getting invited to a showing.",11,0,,
+5e83a5f9-f314-4a1a-e796-bda62ab7c9ef,46,0,0,0,0,4,,0,0,2200.0,
+5e99e70b-039b-cb9e-005a-27c9709cc2e1,39,0,1,7,6,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 1 to ~7. This small adjustment might improve your chances of getting invited to a showing.",1,0,3200.0,
+5f1a590e-6c09-37e0-34dd-5fd7765a14be,34,0,50,51,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 50 to ~51. This small adjustment might improve your chances of getting invited to a showing.",50,0,2700.0,
+5fe2606e-a311-1546-5620-b8948c234330,38,1,57,57,0,0,,57,0,,
+60c17e43-41b9-8705-8d63-a85014cfe7b5,32,0,52,52,0,0,,52,0,,
+61c63424-95d2-5be9-1e1c-2ebbec877b13,38,0,56,56,0,0,,56,0,,
+6274f03a-b834-4217-5189-da7a85ff2b44,43,0,29,65,36,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 29 to ~65. This small adjustment might improve your chances of getting invited to a showing.",29,0,3200.0,
+627c7181-7e86-a641-9997-3060b13e7486,34,0,62,62,0,0,,62,0,,
+63317ab9-9f8b-4e69-1422-db75e994d6a2,46,0,10,15,5,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 10 to ~15. This small adjustment might improve your chances of getting invited to a showing.",10,0,2700.0,
+64009ca8-386c-158b-0256-80f162545e41,35,0,55,55,0,0,,55,0,3200.0,
+64c00371-104e-87f2-e5e3-70c8ce2cec54,40,0,69,69,0,0,,69,0,,
+6625f3fb-3ca6-4f3e-e9b6-5d79d68a3088,36,0,42,42,0,0,,42,0,,
+66b4e5cb-bf2d-cfa1-ebd0-83b6d6fcfd10,33,1,24,24,0,0,,35,11,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 24 to ~35. This may help you receive more viewing invitations."
+67ce1192-0df7-e5c5-5bd7-6a69dbea9787,41,0,59,59,0,0,,65,6,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 59 to ~65. This may help you receive more viewing invitations."
+68717852-e269-36ec-365c-9953d5459101,44,1,50,50,0,0,,52,2,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 50 to ~52. This may help you receive more viewing invitations."
+687f469a-1f1d-50b6-2fb2-489081643167,38,0,57,57,0,0,,57,0,,
+689a5cdf-5c50-b442-3e55-99a3f6d6f477,40,0,17,53,36,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 17 to ~53. This small adjustment might improve your chances of getting invited to a showing.",17,0,,
+6922d910-b24c-c895-3f6c-4479b9ebc599,34,0,47,47,0,0,,47,0,2700.0,
+69b4f766-4bab-5f4f-6f45-5985c140ddc9,46,0,54,54,0,0,,54,0,,
+6a061383-8aca-9b0a-e7fd-676af00337b0,45,0,71,71,0,0,,71,0,3200.0,
+6a2aad12-ad17-1784-0754-4bb1fdf52475,32,0,11,60,49,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 11 to ~60. This small adjustment might improve your chances of getting invited to a showing.",11,0,2700.0,
+6aec1895-96d7-58ec-39aa-2a419d8094e7,30,0,19,63,44,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 19 to ~63. This small adjustment might improve your chances of getting invited to a showing.",19,0,,
+6b1caaf8-5cba-9da4-7129-28b260db1137,41,0,6,19,13,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 6 to ~19. This small adjustment might improve your chances of getting invited to a showing.",6,0,,
+6b5541b5-d755-25c9-f6d7-c3b6b52c6d12,43,0,18,61,43,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 18 to ~61. This small adjustment might improve your chances of getting invited to a showing.",18,0,2600.0,
+6b6e5f0f-eaf9-a2fc-e93c-3bc3c398293e,46,1,49,49,0,0,,50,1,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 49 to ~50. This may help you receive more viewing invitations."
+6be18766-2272-3464-b8ce-12bad78e2a6f,34,0,3,9,6,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 3 to ~9. This small adjustment might improve your chances of getting invited to a showing.",3,0,2600.0,
+6c4cd5ab-1e2a-572e-5648-92914bf10c8c,45,0,55,55,0,0,,55,0,,
+6c9f2d5a-9bca-87a3-63f6-7b3bda53fc4b,43,0,53,53,0,0,,53,0,2700.0,
+6d3e9c1a-059e-5a51-5118-d429590e0c35,46,0,56,56,0,0,,56,0,,
+6d5cb34f-9b55-22a5-8836-c416ed2ee176,45,1,78,78,0,0,,78,0,2700.0,
+6d988b16-058b-e64e-fb5b-28195cd7f14b,35,0,55,55,0,0,,55,0,,
+6dbcf23b-dcad-7f48-4036-de0eb197df92,33,0,56,56,0,0,,56,0,,
+6dd1d4a0-e1c9-bff3-afe9-4e74fd1eecfa,32,0,40,40,0,0,,49,9,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 40 to ~49. This may help you receive more viewing invitations."
+6e695996-fc4f-7f1c-1c29-3c60cdff3741,35,0,9,17,8,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 9 to ~17. This small adjustment might improve your chances of getting invited to a showing.",9,0,2700.0,
+6e971d6f-9371-479b-4808-b7379f939e8e,33,0,58,58,0,0,,58,0,,
+6ff4ad97-1388-e029-8c23-614a9cf28049,37,0,45,46,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 45 to ~46. This small adjustment might improve your chances of getting invited to a showing.",56,11,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 45 to ~56. This may help you receive more viewing invitations."
+715eed2e-dbba-eb05-92ea-417612c0b923,36,0,24,57,33,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 24 to ~57. This small adjustment might improve your chances of getting invited to a showing.",24,0,2700.0,
+71efe1bc-dfab-4590-516c-0326e28b6769,34,0,6,15,9,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 6 to ~15. This small adjustment might improve your chances of getting invited to a showing.",6,0,,
+72eedb89-1d0d-6fdc-f70a-72ffbd718b01,33,0,55,55,0,0,,55,0,,
+73d5e087-ca05-21dc-b30c-763c623b139c,34,0,58,58,0,0,,58,0,,
+74ea8f71-fbc4-5f3c-73ad-6ab2e15b4f1e,36,0,16,16,0,0,,19,3,1700.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1700 per month, your potential matches could increase from 16 to ~19. This may help you receive more viewing invitations."
+75680233-e633-cf12-0502-ceda990d1f27,31,0,73,73,0,0,,73,0,,
+75840a15-7556-ea0a-d153-3d721c467d4f,32,0,20,65,45,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 20 to ~65. This small adjustment might improve your chances of getting invited to a showing.",20,0,3200.0,
+763c9a12-447d-c34a-26e0-115507011164,39,0,48,48,0,0,,48,0,2700.0,
+777afb41-2c20-b75b-df1a-cc09c2d4cb63,44,0,51,51,0,0,,51,0,2700.0,
+777f238a-6ce5-7ebc-94a8-c743087981fe,42,0,48,48,0,0,,55,7,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 48 to ~55. This may help you receive more viewing invitations."
+77a4a67c-bece-6367-c9c9-caeeb429e97b,32,0,3,3,0,0,,3,0,1000.0,
+77bf7786-2f74-ede9-ce4b-9ae1c909e63f,32,0,300,300,0,,,300,0,,
+7821aadd-a46e-d11d-2cfd-d1269db9c43b,34,0,20,62,42,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 20 to ~62. This small adjustment might improve your chances of getting invited to a showing.",20,0,3200.0,
+783e4542-b686-4b38-d352-6de6c4950fd1,39,0,60,60,0,0,,60,0,,
+7844d3ac-043e-08b2-4887-a9de9749594e,40,0,11,11,0,0,,11,0,1400.0,
+78c98d1a-5e99-7753-b8be-8ed70258df36,43,1,56,56,0,0,,56,0,2700.0,
+7964d13a-8dd8-baeb-24e6-7a106448714c,34,0,61,61,0,0,,61,0,3200.0,
+7a3e7261-8885-a827-cdc0-5fa7be172541,43,1,5,5,0,0,,5,0,1000.0,
+7b7569df-918f-ba06-3536-5144e0c29803,39,0,20,58,38,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 20 to ~58. This small adjustment might improve your chances of getting invited to a showing.",20,0,2700.0,
+7c1e8b52-972c-e5ab-c28b-d0c9e5b43170,44,0,59,59,0,0,,59,0,,
+7d5be396-b786-7a5f-6048-7b055b6f958c,32,0,23,23,0,0,,35,12,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 23 to ~35. This may help you receive more viewing invitations."
+7e150f99-6605-9cd8-b3db-36aac51e8a95,41,0,3,13,10,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 3 to ~13. This small adjustment might improve your chances of getting invited to a showing.",6,3,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 3 to ~6. This may help you receive more viewing invitations."
+7e2d7914-0227-b3d9-a0e4-8a1b8865ba51,30,0,49,49,0,0,,49,0,2700.0,
+7e44cfb7-0727-87d5-3d75-74a645a8f880,34,1,42,42,0,0,,51,9,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 42 to ~51. This may help you receive more viewing invitations."
+7e84b0be-4b85-2671-190f-b7138feb6257,38,0,5,5,0,0,,5,0,1000.0,
+7ed8bac6-8acf-9671-783f-bed516e2c759,44,0,12,12,0,0,,12,0,1400.0,
+7f29dd53-002f-d3e0-907c-105ee8be2f70,42,0,7,22,15,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 7 to ~22. This small adjustment might improve your chances of getting invited to a showing.",7,0,1800.0,
+7f7f026d-affa-c0f5-e546-eddfe23d9ea4,31,0,4,4,0,0,,4,0,1000.0,
+7f821ab3-b983-8104-1aea-d96ce0e36289,39,0,68,68,0,0,,68,0,,
+7fbc2f6c-2462-5455-6acd-94265382dea5,45,0,21,54,33,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 21 to ~54. This small adjustment might improve your chances of getting invited to a showing.",21,0,,
+7fbd1feb-7321-b422-8863-e2d178f00f8d,39,0,38,38,0,0,,43,5,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 38 to ~43. This may help you receive more viewing invitations."
+80b53461-c6d1-f398-843a-16eee18f3528,43,0,57,57,0,0,,57,0,3200.0,
+81a6399e-ac29-0d56-06d3-fd9e39bc5942,39,1,55,56,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 55 to ~56. This small adjustment might improve your chances of getting invited to a showing.",59,4,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 55 to ~59. This may help you receive more viewing invitations."
+829c14af-6f7d-9606-a92e-e9bcb3f6c0c2,33,0,59,59,0,0,,59,0,,
+82fe9746-47f6-48d6-b00d-012f560d5e8b,37,0,26,26,0,0,,39,13,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 26 to ~39. This may help you receive more viewing invitations."
+834eec39-5ac5-1c49-b99f-77bae722b9c8,38,0,13,51,38,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 13 to ~51. This small adjustment might improve your chances of getting invited to a showing.",13,0,2700.0,
+850d82c2-3d84-bef1-d52f-e478e4056dcf,43,0,57,57,0,0,,57,0,,
+8617df4c-fba5-2595-3506-01d713a7a8a8,44,0,68,69,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 68 to ~69. This small adjustment might improve your chances of getting invited to a showing.",68,0,,
+8618b4a9-da1d-8877-ab88-c7e4c0a03509,43,0,2,2,0,0,,2,0,1000.0,
+86b8a9e6-75c8-faf4-6d6c-c46fe6f4b222,41,1,38,38,0,0,,45,7,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 38 to ~45. This may help you receive more viewing invitations."
+86d78b6d-84bc-429f-4318-59fc88808eb7,45,0,59,59,0,0,,59,0,,
+876af497-58c7-0348-a32c-85db1fc0dc92,32,0,9,9,0,0,,9,0,1400.0,
+885f48f6-d48b-3713-4f80-6c9623b280fc,46,0,16,52,36,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 16 to ~52. This small adjustment might improve your chances of getting invited to a showing.",16,0,,
+887e7679-19e5-d7ea-7b0d-50b026c6cdbd,30,0,17,51,34,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 17 to ~51. This small adjustment might improve your chances of getting invited to a showing.",17,0,2700.0,
+88d42fcf-d51a-ff9b-625d-95b4b1d58a2c,44,0,2,4,2,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 2 to ~4. This small adjustment might improve your chances of getting invited to a showing.",2,0,1800.0,
+89822584-9d0c-5c45-f4fe-a1d4a1c2f23c,33,1,22,22,0,0,,26,4,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 22 to ~26. This may help you receive more viewing invitations."
+8abfe9d0-6d4a-b503-c569-cf25cc84f84c,38,0,22,22,0,0,,33,11,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 22 to ~33. This may help you receive more viewing invitations."
+8c7833eb-eb9f-938f-12dd-08e648ceed8a,45,1,12,49,37,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 12 to ~49. This small adjustment might improve your chances of getting invited to a showing.",12,0,3200.0,
+8d385523-f8e6-a501-5b1f-0943a7137280,46,0,7,44,37,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 7 to ~44. This small adjustment might improve your chances of getting invited to a showing.",7,0,,
+8ebe2e8f-585a-6c7d-8d0e-792e1e503612,38,0,1,3,2,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 1 to ~3. This small adjustment might improve your chances of getting invited to a showing.",1,0,3200.0,
+900e81a2-f263-eceb-5292-6f81de7c20d9,35,0,51,51,0,0,,53,2,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 51 to ~53. This may help you receive more viewing invitations."
+9094cc3c-7bc0-a2b6-033e-d22715ae08d3,44,0,59,59,0,0,,59,0,,
+91297fbc-001c-bb0c-1ca3-25d5424caf48,38,1,50,50,0,0,,52,2,3000.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $3000 per month, your potential matches could increase from 50 to ~52. This may help you receive more viewing invitations."
+91a522a5-b9b5-9e2e-1ec2-5986605678f5,45,1,36,36,0,0,,39,3,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 36 to ~39. This may help you receive more viewing invitations."
+9210886b-bfd9-f790-75fb-e04dcdc87e2f,46,0,6,6,0,0,,6,0,1000.0,
+92ea3f99-53e6-1f73-9e53-dcbbbc4c2977,40,0,18,58,40,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 18 to ~58. This small adjustment might improve your chances of getting invited to a showing.",18,0,,
+9304ee67-a727-4ebe-55af-349494f61cda,39,0,55,55,0,0,,55,0,,
+9334c6f3-1203-2a86-fb91-afc80065561b,46,1,70,70,0,0,,70,0,,
+9363af71-73ad-9ddd-5443-8b71f64ff6f3,46,0,62,62,0,0,,62,0,,
+942fc4f4-f380-c8f9-3c13-9860ed85bd62,40,0,43,43,0,0,,47,4,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 43 to ~47. This may help you receive more viewing invitations."
+94d312a4-ea86-c867-e292-86dc15247125,44,0,20,63,43,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 20 to ~63. This small adjustment might improve your chances of getting invited to a showing.",20,0,2700.0,
+96e5b1b0-8668-468a-70b5-1fdb8315029a,40,0,52,52,0,0,,52,0,,
+972e7022-8568-b232-cd1d-a7423917e8ed,42,0,72,72,0,0,,72,0,,
+97394cfa-82b1-4293-a0bd-1ec9891ae214,43,0,55,55,0,0,,55,0,2700.0,
+97a556ee-11ca-79f7-8ae3-966b0b88fcaf,32,1,50,50,0,0,,50,0,2700.0,
+98e23859-b605-eb1a-44dd-9991b7295d8d,40,0,29,29,0,0,,36,7,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 29 to ~36. This may help you receive more viewing invitations."
+98e8d0fa-f76f-cb62-9b7b-4fdad3e41a24,33,0,36,36,0,0,,40,4,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 36 to ~40. This may help you receive more viewing invitations."
+9904e2f5-6360-be98-7089-21721c7de739,31,0,47,47,0,0,,47,0,2700.0,
+99c648b5-6186-8af1-d568-784b3eb67bce,45,0,56,56,0,0,,56,0,,
+9b9883ee-786f-125b-7e84-8446089912ad,35,0,55,55,0,0,,55,0,,
+9c63c6c0-711c-8c6e-c2b3-a3bf907ee6cc,33,0,46,46,0,0,,46,0,2700.0,
+9c6a6be5-168d-8a9a-fbd0-da943f2cd231,36,0,11,17,6,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 11 to ~17. This small adjustment might improve your chances of getting invited to a showing.",11,0,2600.0,
+9c9742e7-6f1c-051d-4e45-75c9827867f8,38,0,24,24,0,0,,39,15,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 24 to ~39. This may help you receive more viewing invitations."
+9ca0b2c0-a296-cd12-fab5-34edeef35b3a,43,0,0,4,4,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 0 to ~4. This small adjustment might improve your chances of getting invited to a showing.",0,0,1000.0,
+9cec1084-e835-ffe3-d53c-aa954e5bafd1,34,1,50,50,0,0,,50,0,2700.0,
+9cf682a0-6dbf-d076-abb4-ed452dc27bab,36,1,2,13,11,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 2 to ~13. This small adjustment might improve your chances of getting invited to a showing.",2,0,4700.0,
+9d6bd8d6-a7a7-de13-e83b-9a3eb60647e9,43,1,57,57,0,0,,57,0,,
+9e96f839-dce6-7531-89ab-da7019200539,38,0,79,79,0,0,,79,0,,
+9f0b82d6-6fa0-b882-1dcb-a6940413f56b,42,0,4,17,13,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 4 to ~17. This small adjustment might improve your chances of getting invited to a showing.",4,0,,
+9f4deebc-5ebb-8ed2-bfa9-4305baa4bfbd,30,1,57,57,0,0,,57,0,2700.0,
+9fbc979b-e3cf-7d67-2288-7d0c04511b4b,32,0,49,49,0,0,,49,0,2700.0,
+9fc93754-cffe-a005-4f4a-15de371467cb,33,0,50,50,0,0,,57,7,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 50 to ~57. This may help you receive more viewing invitations."
+9fee0284-4f56-c7ad-d67f-1663ea9d9f1d,38,0,16,69,53,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 16 to ~69. This small adjustment might improve your chances of getting invited to a showing.",16,0,,
+a0415e16-fa06-2665-0800-c80cc5adff23,40,1,5,5,0,0,,5,0,1400.0,
+a1bfaf0c-277d-3499-9152-0fe3d9159d6f,35,0,9,17,8,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 9 to ~17. This small adjustment might improve your chances of getting invited to a showing.",9,0,,
+a20c2999-3490-9daa-3cc1-587ad67f21e8,35,0,9,40,31,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 9 to ~40. This small adjustment might improve your chances of getting invited to a showing.",12,3,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 9 to ~12. This may help you receive more viewing invitations."
+a2655894-df46-5243-576b-6308622d7e55,33,0,60,60,0,0,,60,0,2700.0,
+a2eb45d1-cf3f-6d69-7b84-2047ff445c67,40,0,2,10,8,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 2 to ~10. This small adjustment might improve your chances of getting invited to a showing.",2,0,,
+a388e466-1127-72ea-bf38-1b73653b6c87,37,0,9,9,0,0,,9,0,1000.0,
+a3adf588-eb9f-7cbd-abc5-1c0cfe2cfff6,42,0,57,57,0,0,,57,0,,
+a410a3b4-d89d-3180-01d9-07ecccbf8a70,37,1,61,61,0,0,,61,0,,
+a46a3e55-06f1-7027-0766-bb084707a773,38,0,73,73,0,0,,73,0,,
+a4c16bf3-b215-c4d6-33a3-bf2db42367f4,33,0,5,5,0,0,,5,0,1000.0,
+a4c30bcc-e5a8-c322-8548-35e1aa750381,30,0,43,43,0,0,,53,10,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 43 to ~53. This may help you receive more viewing invitations."
+a538b828-a9e8-9fd7-aef7-d095c8aab604,35,0,57,57,0,0,,57,0,,
+a5839ee7-798c-5c1c-31b9-67907f8bd7c2,33,1,49,49,0,0,,49,0,3200.0,
+a59e6761-81db-782a-84ee-da5aee1874fa,35,0,3,8,5,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 3 to ~8. This small adjustment might improve your chances of getting invited to a showing.",3,0,2700.0,
+a654c4e1-cbc9-f88f-df03-8d0bb50dcf92,38,0,51,51,0,0,,54,3,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 51 to ~54. This may help you receive more viewing invitations."
+a69706e0-973a-b384-e345-72b65ee8e875,34,0,24,53,29,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 24 to ~53. This small adjustment might improve your chances of getting invited to a showing.",24,0,,
+a78722e8-dd45-2af3-7cd3-12275c1827e0,33,0,54,54,0,0,,54,0,,
+a7944638-e03b-9813-a4e4-0162938f1ece,32,0,2,2,0,0,,2,0,1000.0,
+a8dbedfd-ffcd-15dd-d35d-35a793ad1d4b,41,0,27,61,34,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 27 to ~61. This small adjustment might improve your chances of getting invited to a showing.",27,0,2700.0,
+a8fbfe0a-b4c9-015f-b546-a49515fbde2f,39,0,69,69,0,0,,69,0,,
+a925c2d5-d45f-e9b9-f869-c5ad8e9918f5,42,0,50,50,0,0,,54,4,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 50 to ~54. This may help you receive more viewing invitations."
+a98c8f73-624f-87c7-e583-83f55a30a972,46,0,4,4,0,0,,4,0,1000.0,
+aad157ab-678b-fbbe-3519-486519be6bc2,35,0,17,52,35,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 17 to ~52. This small adjustment might improve your chances of getting invited to a showing.",19,2,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 17 to ~19. This may help you receive more viewing invitations."
+ab681ee2-15f4-1aaf-5295-6a29d7d9302d,44,0,52,52,0,0,,52,0,2700.0,
+ad76ffd3-8bcf-0cd0-2c0c-3d468a43bcc5,46,0,20,53,33,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 20 to ~53. This small adjustment might improve your chances of getting invited to a showing.",20,0,2600.0,
+ade047c7-96b8-f815-812a-3bbd7710ce4f,45,0,5,5,0,0,,5,0,1000.0,
+aef5c2ad-5b42-7c47-ef6f-482bd06e43e0,39,0,18,55,37,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 18 to ~55. This small adjustment might improve your chances of getting invited to a showing.",18,0,,
+aff74fb2-5da1-2e22-2b66-5ce3e2a967c8,41,0,73,73,0,0,,73,0,,
+b049c833-c92d-aa87-7060-0a0994b22c26,38,0,14,55,41,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 14 to ~55. This small adjustment might improve your chances of getting invited to a showing.",14,0,2700.0,
+b0874a50-083e-60ef-1b2b-7e63ae229d76,35,0,8,15,7,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 8 to ~15. This small adjustment might improve your chances of getting invited to a showing.",8,0,2700.0,
+b0dc942f-1383-58da-51b6-e06979b4659c,30,0,48,48,0,0,,48,0,,
+b16d20ec-03ad-eab1-08ee-883ea86d4c93,33,0,1,9,8,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 1 to ~9. This small adjustment might improve your chances of getting invited to a showing.",1,0,1400.0,
+b2be4a3a-c989-9143-39d1-b1827c3aa36b,44,0,64,64,0,0,,64,0,,
+b2e70c05-8aa5-8d37-52c6-28953d414916,37,0,66,66,0,0,,66,0,,
+b2f2507c-4b86-a936-2857-09c7df822e5f,38,0,54,54,0,0,,54,0,,
+b3d7e6ba-63e7-239c-383f-d5f4741483e1,31,0,11,33,22,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 11 to ~33. This small adjustment might improve your chances of getting invited to a showing.",13,2,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 11 to ~13. This may help you receive more viewing invitations."
+b4809954-9ad4-0cb4-7c99-157cbf217702,43,0,53,53,0,0,,53,0,,
+b4c4af9a-95cf-3b26-d0d3-6cb6285752e8,39,0,6,6,0,0,,6,0,1000.0,
+b56b62c4-e4a3-d27c-a06b-39724cc96cec,36,0,34,34,0,0,,41,7,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 34 to ~41. This may help you receive more viewing invitations."
+b5f7987e-1738-042e-9ad4-e550213112e9,34,0,6,6,0,0,,6,0,1000.0,
+b6636fcb-e33b-7038-f573-33313c291a00,41,0,0,2,2,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 0 to ~2. This small adjustment might improve your chances of getting invited to a showing.",0,0,1400.0,
+b6652564-d147-db59-b12e-fa82809a59c3,31,0,62,62,0,0,,62,0,,
+b7cd06e3-3da9-5004-4390-43381f6fb504,36,0,52,52,0,0,,56,4,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 52 to ~56. This may help you receive more viewing invitations."
+b87701cb-edd9-4853-c0ab-aac8c7d21d8c,44,0,63,63,0,0,,63,0,,
+bad8a610-fe50-c40b-4fe1-0f4615a57024,42,0,57,57,0,0,,57,0,,
+bbd29790-6764-9d2d-af5b-1dc7cff87f0c,30,1,50,50,0,0,,57,7,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 50 to ~57. This may help you receive more viewing invitations."
+bbdb8e82-2258-db24-074e-bd4ead7cfd4e,38,0,25,25,0,0,,43,18,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 25 to ~43. This may help you receive more viewing invitations."
+bc34f431-196a-1317-be34-9c47e2d0cef7,46,0,1,3,2,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 1 to ~3. This small adjustment might improve your chances of getting invited to a showing.",1,0,,
+bc8fd0fc-125c-9a2a-1d24-bde6558e77c5,30,0,14,67,53,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 14 to ~67. This small adjustment might improve your chances of getting invited to a showing.",14,0,,
+bded0c54-a2a3-712a-4382-b1bca5f4a7a7,38,1,67,67,0,0,,67,0,,
+be32a5b8-a1bb-e49b-8835-4557c1cf6e67,43,1,47,47,0,0,,47,0,2700.0,
+be89136a-2142-0c5f-ee4d-5ddee9bb6635,32,0,8,13,5,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 8 to ~13. This small adjustment might improve your chances of getting invited to a showing.",8,0,,
+bf0d33db-d85a-7a86-87e9-12820a78a3b2,37,0,1,1,0,2,,1,0,1400.0,
+c0c81efb-e40f-6753-b30c-1ac7328b13c3,32,0,2,8,6,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 2 to ~8. This small adjustment might improve your chances of getting invited to a showing.",2,0,,
+c1b08091-f993-8618-5480-6877550e1b39,38,0,45,45,0,0,,45,0,2700.0,
+c26adec4-eea3-030f-4bc0-527e90923f09,42,0,58,58,0,0,,58,0,,
+c2d56eab-c456-f14a-634c-d13cfe8387a2,44,0,49,49,0,0,,49,0,2700.0,
+c5050d47-9eda-c82c-c9f0-fde452b65a61,36,0,19,61,42,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 19 to ~61. This small adjustment might improve your chances of getting invited to a showing.",19,0,2700.0,
+c532c12b-00f4-4be6-7c46-f1418c7b20a5,36,0,22,69,47,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 22 to ~69. This small adjustment might improve your chances of getting invited to a showing.",22,0,,
+c6c4bfe1-12ac-c4ff-2442-94dd690930de,35,1,50,50,0,0,,60,10,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 50 to ~60. This may help you receive more viewing invitations."
+c6ff61a3-c7ff-b951-cc42-06db02bf3df0,30,0,8,8,0,0,,8,0,1400.0,
+c7944c0f-c4cc-3a66-e8df-7b073b2b2abc,32,0,66,66,0,0,,66,0,,
+c9620e36-f2ef-6db5-9732-1ba3bc627fa2,46,0,23,84,61,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 23 to ~84. This small adjustment might improve your chances of getting invited to a showing.",23,0,,
+c96520aa-319d-fb6e-112f-b31febc9c7a5,44,1,60,60,0,0,,60,0,3200.0,
+c966097e-75f0-7446-df7f-072d1d0a4f0a,33,0,58,58,0,0,,58,0,,
+ca401f51-0305-2615-bbaa-f2c61c5600db,46,0,58,58,0,0,,58,0,2700.0,
+ca894f31-a47a-1f3e-85ba-2cd3d9d19b45,43,0,51,51,0,0,,51,0,,
+cae5bd29-e930-6d50-d35f-da1753f20e30,40,0,55,55,0,0,,55,0,,
+cb7e9e1f-114f-b2e0-6e73-49d5a8ab402e,45,0,17,17,0,0,,20,3,1700.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1700 per month, your potential matches could increase from 17 to ~20. This may help you receive more viewing invitations."
+cbe23d2c-fbee-5867-2231-fcf76e738e98,30,0,3,3,0,0,,3,0,1000.0,
+cc3811d4-10b2-49f4-36e4-099b7c9355c3,42,0,11,11,0,0,,11,0,1400.0,
+ccb98746-e34f-a7a2-ee53-c8ef008fca9c,31,0,54,54,0,0,,54,0,,
+cd5331d9-df25-c35b-01e9-87c107ed2195,42,0,62,62,0,0,,62,0,,
+cda9d3e6-4147-1858-ea1a-69607cd4c249,31,0,27,64,37,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 27 to ~64. This small adjustment might improve your chances of getting invited to a showing.",27,0,,
+ce092378-71b0-e218-ab92-b02c202cc494,44,0,6,6,0,0,,6,0,1000.0,
+cfb37fd0-ee0e-820e-37bb-8b1a5dd2502b,44,0,62,62,0,0,,62,0,,
+d0491680-fc4d-57f1-0a0b-1a12629982f8,34,0,49,49,0,0,,49,0,2700.0,
+d07566ba-fb6a-ff2d-dead-805996b60375,32,0,6,6,0,0,,6,0,1000.0,
+d09dd8a3-b791-e3ba-85c0-730f6ba746d9,37,0,8,13,5,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 8 to ~13. This small adjustment might improve your chances of getting invited to a showing.",8,0,2600.0,
+d0ca2fd4-00f4-faa8-20cd-89756acc13d5,33,0,16,69,53,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 16 to ~69. This small adjustment might improve your chances of getting invited to a showing.",17,1,3000.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $3000 per month, your potential matches could increase from 16 to ~17. This may help you receive more viewing invitations."
+d1812114-1518-0cb8-c03b-bad7bae5ccbc,36,0,8,16,8,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 8 to ~16. This small adjustment might improve your chances of getting invited to a showing.",8,0,3200.0,
+d325c1f9-a799-62b2-1f9c-2716784131bd,46,1,57,57,0,0,,57,0,2700.0,
+d5a27b6c-e402-40d1-cf8a-b109a655ea04,37,0,21,21,0,0,,33,12,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 21 to ~33. This may help you receive more viewing invitations."
+d5a60130-bab9-0c5e-2493-4fb183992f14,43,0,7,16,9,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 7 to ~16. This small adjustment might improve your chances of getting invited to a showing.",7,0,,
+d5d2f8c4-3073-92f8-974a-56ca3b0e31c4,31,0,8,25,17,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 8 to ~25. This small adjustment might improve your chances of getting invited to a showing.",8,0,3200.0,
+d637f6da-c577-8961-788c-57e34c657424,35,0,68,68,0,0,,68,0,2700.0,
+d73c913b-cdb6-98aa-cee0-e492b4ff3227,34,0,5,11,6,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 5 to ~11. This small adjustment might improve your chances of getting invited to a showing.",5,0,,
+d7785be8-1027-76ab-f86e-b6728c596009,31,0,19,58,39,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 19 to ~58. This small adjustment might improve your chances of getting invited to a showing.",19,0,2700.0,
+da708d38-1541-f828-c819-94780ca30bac,44,0,58,58,0,0,,63,5,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 58 to ~63. This may help you receive more viewing invitations."
+da7f08c9-a0aa-e6e5-3501-055c4ba0561a,32,0,17,55,38,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 17 to ~55. This small adjustment might improve your chances of getting invited to a showing.",17,0,3000.0,
+daef7fbb-202a-3a88-f89d-bb81d16e64ef,34,0,17,54,37,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 17 to ~54. This small adjustment might improve your chances of getting invited to a showing.",17,0,3200.0,
+dd5038cf-b342-a642-b5da-73ca49180762,35,0,10,51,41,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 10 to ~51. This small adjustment might improve your chances of getting invited to a showing.",10,0,2700.0,
+dd59eeef-4e97-b1a3-16c0-9cacaa916a43,31,0,50,50,0,0,,50,0,2700.0,
+df80db9f-1c88-c75e-3e9e-cf7fd17bddb8,43,1,41,41,0,0,,45,4,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 41 to ~45. This may help you receive more viewing invitations."
+e00e7429-82a8-d491-a20e-103bbd4db00b,42,0,67,67,0,0,,67,0,,
+e114a612-3ae2-99bb-88a6-d6312a135edc,43,0,5,5,0,0,,5,0,1400.0,
+e534c449-160d-ccb5-e33a-2fbb7f2e51e9,45,0,49,49,0,0,,49,0,2700.0,
+e55b6e68-2c54-bd81-e4d6-8f494e9a944f,40,0,42,42,0,0,,44,2,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 42 to ~44. This may help you receive more viewing invitations."
+e581d412-4345-5a5b-c771-f915f3308fbf,37,0,2,3,1,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 2 to ~3. This small adjustment might improve your chances of getting invited to a showing.",3,1,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 2 to ~3. This may help you receive more viewing invitations."
+e5d8b964-502d-b829-1248-d638d977f12d,32,0,63,63,0,0,,63,0,,
+e5e76598-33c2-aba5-8968-b5d667e54d03,43,0,60,60,0,0,,60,0,,
+e60b142d-2d11-3c3e-1a7a-afa22271c71d,43,0,15,15,0,0,,15,0,1400.0,
+e60e2d57-9640-3182-aea4-8b908c4ea88f,43,0,59,59,0,0,,59,0,,
+e752df8c-1ac4-fbc4-0628-20d523a4fefb,41,0,38,38,0,0,,49,11,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 38 to ~49. This may help you receive more viewing invitations."
+e87fa6b9-0333-dc54-eceb-45bbd60bce5d,33,0,63,63,0,0,,63,0,,
+e8bd6c67-cf85-4595-72f4-814c929aeb34,30,0,18,18,0,0,,22,4,1700.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1700 per month, your potential matches could increase from 18 to ~22. This may help you receive more viewing invitations."
+e909b135-a219-75a0-7a8a-1efb6fe3d7c4,44,0,1,4,3,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 1 to ~4. This small adjustment might improve your chances of getting invited to a showing.",1,0,1000.0,
+e98f48e4-df92-415e-64b3-7926a139abd2,44,0,44,44,0,0,,44,0,,
+e9d6724f-0546-e63b-4153-73fa9430410f,39,0,52,52,0,0,,55,3,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 52 to ~55. This may help you receive more viewing invitations."
+e9d71d4d-4eec-9189-6d98-6c544fa5f253,34,1,9,9,0,0,,9,0,1000.0,
+ea9a173b-6e9a-0362-cd56-d5753f99fd97,42,0,62,62,0,0,,62,0,,
+eb82473a-548e-854d-1e3b-48d9a429d235,36,0,13,13,0,0,,13,0,1400.0,
+ec3d6a0f-4af0-0873-bc7b-4ea2ada133aa,40,0,21,60,39,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 21 to ~60. This small adjustment might improve your chances of getting invited to a showing.",21,0,,
+ecbd73f5-537e-8db1-f4c5-564d8ca3e1e0,30,0,47,47,0,0,,47,0,2700.0,
+ed254662-8ae6-c9fc-1dd2-e84e6a65029f,37,0,57,57,0,0,,57,0,,
+ed5fc4bf-ebc8-746f-a85f-c57bb51f1968,41,0,56,56,0,0,,56,0,,
+ee0a780d-55b0-d6f8-2121-477bfaf6ac10,37,0,48,48,0,0,,48,0,2700.0,
+ee7e9f2c-ff9d-6ac6-9027-24419a2904eb,41,0,6,6,0,0,,6,0,1000.0,
+eee30a68-b6c9-fe4a-fe4b-f7e79b96ff43,40,0,10,10,0,0,,10,0,1400.0,
+ef1810e7-226e-f6e9-c3ec-355c6f0e1905,42,0,9,9,0,0,,9,0,1400.0,
+ef419c78-3be6-3c81-ad82-0b8f1c12be31,34,1,53,53,0,0,,57,4,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 53 to ~57. This may help you receive more viewing invitations."
+efc8c829-a551-f29b-ef7e-50b419c47bd1,45,0,10,10,0,0,,10,0,1400.0,
+f13bf0a4-bb93-ab3b-d350-198e9d0e5ed3,39,1,56,56,0,0,,56,0,3700.0,
+f2fc6f4c-f54f-3c82-82bc-d0dd22ea69e6,35,0,52,52,0,0,,52,0,,
+f346090f-c406-05cd-3f4f-f35fbaa7b1d3,36,1,59,59,0,0,,59,0,,
+f47a310d-8c8c-aee7-497f-910df562a3bb,36,0,40,40,0,0,,49,9,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 40 to ~49. This may help you receive more viewing invitations."
+f4922c5d-f995-d33b-6eb7-830db84ea23d,39,0,5,5,0,0,,5,0,1000.0,
+f4d919da-4b12-73ab-a3eb-e957b3923984,34,0,30,30,0,0,,46,16,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 30 to ~46. This may help you receive more viewing invitations."
+f543d50d-7bf8-d57d-2797-c57a70966d85,45,0,27,27,0,0,,38,11,1800.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $1800 per month, your potential matches could increase from 27 to ~38. This may help you receive more viewing invitations."
+f592e834-d839-0886-09c2-1fa0e718e490,35,0,25,63,38,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 25 to ~63. This small adjustment might improve your chances of getting invited to a showing.",25,0,,
+f6c92c9f-7eba-3d89-17b8-cfa6a4badce0,44,1,64,64,0,0,,64,0,,
+f80951b9-9db4-9ce9-4e57-fc203e116e76,43,0,56,56,0,0,,56,0,2700.0,
+f933eacb-a549-ba0e-ab81-092845e24774,39,0,58,58,0,0,,58,0,,
+f93c00bb-ca0e-7b36-4b99-d66af4129ce7,31,0,10,37,27,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 10 to ~37. This small adjustment might improve your chances of getting invited to a showing.",11,1,2200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2200 per month, your potential matches could increase from 10 to ~11. This may help you receive more viewing invitations."
+fa387ae2-87d4-5988-a1fc-924dc3e591a4,40,1,68,68,0,0,,68,0,,
+fb997d54-9cf2-3665-bb47-f603697bb8ed,40,0,53,53,0,0,,55,2,2600.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $2600 per month, your potential matches could increase from 53 to ~55. This may help you receive more viewing invitations."
+fbad75ce-3dbe-7a16-e25f-2d516bf7d7c8,33,0,49,49,0,0,,49,0,,
+fbaf4cef-ebc4-93ca-1a25-c44408d59307,46,0,59,59,0,0,,60,1,3200.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $3200 per month, your potential matches could increase from 59 to ~60. This may help you receive more viewing invitations."
+fbb547cd-1f12-c4af-5b3a-3ca300b76833,35,0,6,6,0,0,,6,0,1000.0,
+fbe9ed60-de74-758c-3bb8-a767169c9ab8,38,0,17,59,42,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 17 to ~59. This small adjustment might improve your chances of getting invited to a showing.",17,0,,
+fc69011f-70a0-d125-7ae4-b7ea7b73fe28,37,0,56,56,0,0,,56,0,,
+fc731a43-ca14-de56-2c7f-e9cf62519352,36,0,57,57,0,0,,57,0,,
+fcd504a9-e040-33df-0277-245f3f1a0cf1,43,0,6,12,6,2,"Hi! We noticed your application has had limited opportunities. If you can consider places with 2 bedroom(s), your potential matches could increase from 6 to ~12. This small adjustment might improve your chances of getting invited to a showing.",8,2,3000.0,"Hi! We noticed your application has had limited opportunities. If you can extend your budget to about $3000 per month, your potential matches could increase from 6 to ~8. This may help you receive more viewing invitations."
+fcf7ec74-000d-79d0-9671-0bc50a260014,31,0,12,54,42,1,"Hi! We noticed your application has had limited opportunities. If you can consider places with 1 bedroom(s), your potential matches could increase from 12 to ~54. This small adjustment might improve your chances of getting invited to a showing.",12,0,2700.0,
+fd1532b9-363b-86d4-33e4-79bfc27ed68e,43,0,2,7,5,3,"Hi! We noticed your application has had limited opportunities. If you can consider places with 3 bedroom(s), your potential matches could increase from 2 to ~7. This small adjustment might improve your chances of getting invited to a showing.",2,0,,
+fd61ac6c-76ed-af7d-3828-21280b849ae9,38,0,55,55,0,0,,55,0,,
+fd6ebb5f-f6dc-c02d-d7f6-961c8eb3f830,46,0,63,64,1,0,"Hi! We noticed your application has had limited opportunities. If you can consider places with 0 bedroom(s), your potential matches could increase from 63 to ~64. This small adjustment might improve your chances of getting invited to a showing.",63,0,,
+fed1004b-41b4-9dab-8956-bb7b20ff68b0,42,0,61,61,0,0,,61,0,,
+ff749ba9-a58c-eda0-1f38-5980f5c75f52,42,1,52,52,0,0,,52,0,,

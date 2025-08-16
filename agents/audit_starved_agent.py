@@ -1,9 +1,12 @@
 # Starvation audit (read-only) → CSVs with ready-to-send suggestions
 import os
 import csv
+from tqdm import tqdm
 from datetime import datetime, timezone
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional , Tuple
 from qdrant_client.models import Record
+import pandas as pd
+
 
 from utils.qdrant_connection import (
     client,
@@ -153,7 +156,10 @@ def audit_starved_users_to_csv(
         w.writeheader()
 
         processed = 0
-        for prof in _scroll_profiles(USER_PROFILES_COLLECTION):
+        profiles = list(_scroll_profiles(USER_PROFILES_COLLECTION))
+        print(f"🔎 Auditing {len(profiles)} user profiles...")
+
+        for prof in tqdm(profiles, desc="Users audited", unit="user"):
             p = prof.payload or {}
             days = _days_since(_parse_date(p.get("application_date")))
             try:
@@ -276,7 +282,10 @@ def audit_starved_owners_to_csv(
         w.writeheader()
 
         processed = 0
-        for prof in _scroll_profiles(OWNER_PROFILES_COLLECTION):
+        profiles = list(_scroll_profiles(OWNER_PROFILES_COLLECTION))
+        print(f"🔎 Auditing {len(profiles)} owner profiles...")
+
+        for prof in tqdm(profiles, desc="Owners audited", unit="owner"):
             p = prof.payload or {}
             days = _days_since(_parse_date(p.get("application_date")))
             try:
@@ -336,3 +345,189 @@ def audit_starved_owners_to_csv(
 
     print(f"✅ Wrote starved owners suggestions → {path} (rows={written})")
     return path
+
+
+
+def _safe_int(x):
+    try: return int(x)
+    except: return 0
+
+def _read_csv(path: str) -> pd.DataFrame:
+    if not os.path.exists(path):
+        return pd.DataFrame()
+    return pd.read_csv(path)
+
+def run_owner_starvation_audit_simple(
+    *,
+    price_delta: float = 200.0,
+    owner_topn: int = 300,
+    days_threshold: int = 30,
+    shows_threshold: int = 1,
+    limit_owners: int | None = None,
+) -> Tuple[str, str]:
+    """
+    Runs the owners starvation audit using your existing engine,
+    then condenses to a 'messages' CSV and a short summary text.
+
+    Returns:
+      messages_csv_path, summary_text
+    """
+    # 1) Run your existing (full) audit
+    raw_csv = audit_starved_owners_to_csv(
+        price_delta=price_delta,
+        owner_topn=owner_topn,
+        days_threshold=days_threshold,
+        shows_threshold=shows_threshold,
+        limit_owners=limit_owners,
+    )
+    raw = _read_csv(raw_csv)
+
+    # Empty case
+    if raw.empty:
+        summary = (
+            "Looking through the owners in the system to explore starved ones, "
+            "we found 0 owners who have not been shown more than once in the last month."
+        )
+        # Still emit an empty messages CSV so ops has a file
+        ts = datetime.now().strftime('%Y%m%d-%H%M%S')
+        out_csv = f"logs/starved_owners_messages_{ts}.csv"
+        pd.DataFrame(columns=["owner_id","days_since_application","number_of_shows","suggested_price","delta_price","message"]).to_csv(out_csv, index=False)
+        return out_csv, summary
+
+    # 2) Compute simple insights
+    total_starved = len(raw)
+    raw["delta_price"] = raw["delta_price"].apply(_safe_int)
+    gain_mask = raw["delta_price"] > 0
+    improved = int(gain_mask.sum())
+    avg_gain_matches = float(raw.loc[gain_mask, "delta_price"].mean() or 0.0)
+
+    # 3) Prepare slim messages CSV
+    # keep only actionable rows (those with improvement)
+    actionable = raw.loc[gain_mask, [
+        "owner_id",
+        "days_since_application",
+        "number_of_shows",
+        "suggested_price",
+        "delta_price",
+        "price_message",
+    ]].copy()
+    actionable = actionable.rename(columns={"price_message": "message"})
+
+    ts = datetime.now().strftime('%Y%m%d-%H%M%S')
+    out_csv = f"logs/starved_owners_messages_{ts}.csv"
+    actionable.to_csv(out_csv, index=False)
+
+    # 4) Build short summary text
+    summary = (
+    f"Starved Owners Audit\n\n"
+    f"We identified {total_starved} owners whose listings have not been shown more than once "
+    f"in the past month.\n\n"
+    f"For {improved} of these owners, reducing the listing price by {int(price_delta)} dollars "
+    f"is expected to increase exposure, with an average improvement of approximately "
+    f"{avg_gain_matches:.1f} additional matched candidates.\n\n"
+    f"An email will be sent to each relevant owner with the suggested adjustment."
+)
+
+    return out_csv, summary
+
+
+def run_user_starvation_audit_simple(
+    *,
+    price_delta: float = 200.0,
+    room_delta: int = 1,
+    user_topn: int = 300,
+    days_threshold: int = 30,
+    shows_threshold: int = 1,
+    limit_users: int | None = None,
+) -> Tuple[str, str]:
+    """
+    Runs the users starvation audit using your existing engine,
+    then condenses to a 'messages' CSV and a short summary text.
+
+    Returns:
+      messages_csv_path, summary_text
+    """
+    # 1) Run your existing (full) audit
+    raw_csv = audit_starved_users_to_csv(
+        price_delta=price_delta,
+        room_delta=room_delta,
+        user_topn=user_topn,
+        days_threshold=days_threshold,
+        shows_threshold=shows_threshold,
+        limit_users=limit_users,
+    )
+    raw = _read_csv(raw_csv)
+
+    # Empty case
+    if raw.empty:
+        summary = (
+            "Looking through the renters in the system to explore starved ones, "
+            "we found 0 renters who have not been shown more than once in the last month."
+        )
+        ts = datetime.now().strftime('%Y%m%d-%H%M%S')
+        out_csv = f"logs/starved_users_messages_{ts}.csv"
+        pd.DataFrame(columns=[
+            "user_id","days_since_application","number_of_shows",
+            "suggested_bedrooms","delta_bedrooms",
+            "suggested_budget","delta_budget",
+            "message"
+        ]).to_csv(out_csv, index=False)
+        return out_csv, summary
+
+    # 2) Compute simple insights
+    total_starved = len(raw)
+    raw["delta_bedrooms"] = raw["delta_bedrooms"].apply(_safe_int)
+    raw["delta_budget"]  = raw["delta_budget"].apply(_safe_int)
+
+    bed_gain_mask = raw["delta_bedrooms"] > 0
+    bud_gain_mask = raw["delta_budget"] > 0
+
+    bed_improved = int(bed_gain_mask.sum())
+    bud_improved = int(bud_gain_mask.sum())
+    avg_bed_gain = float(raw.loc[bed_gain_mask, "delta_bedrooms"].mean() or 0.0)
+    avg_bud_gain = float(raw.loc[bud_gain_mask, "delta_budget"].mean() or 0.0)
+
+    # 3) Prepare slim messages CSV (one row per user if any improvement; prefer combined message)
+    messages_rows = []
+    for _, r in raw.iterrows():
+        has_bed = r.get("delta_bedrooms", 0) > 0
+        has_bud = r.get("delta_budget", 0) > 0
+        if not (has_bed or has_bud):
+            continue
+
+        # Prefer a combined note if both apply
+        parts = []
+        if has_bed:
+            parts.append(f"consider {int(r.get('suggested_bedrooms', 0))} bedroom(s), ~+{int(r.get('delta_bedrooms', 0))} matches")
+        if has_bud:
+            parts.append(f"extend budget to ${int(r.get('suggested_budget', 0))}, ~+{int(r.get('delta_budget', 0))} matches")
+        msg = " & ".join(parts)
+
+        messages_rows.append({
+            "user_id": r["user_id"],
+            "days_since_application": r.get("days_since_application"),
+            "number_of_shows": r.get("number_of_shows"),
+            "suggested_bedrooms": (int(r["suggested_bedrooms"]) if has_bed else ""),
+            "delta_bedrooms": (int(r["delta_bedrooms"]) if has_bed else ""),
+            "suggested_budget": (int(r["suggested_budget"]) if has_bud else ""),
+            "delta_budget": (int(r["delta_budget"]) if has_bud else ""),
+            "message": msg,
+        })
+
+    ts = datetime.now().strftime('%Y%m%d-%H%M%S')
+    out_csv = f"logs/starved_users_messages_{ts}.csv"
+    pd.DataFrame(messages_rows).to_csv(out_csv, index=False)
+
+    # 4) Build short summary text
+    summary = (
+    f"Starved Renters Audit\n\n"
+    f"We identified {total_starved} renters who have not been invited to property show more than once"
+    f"in the past month.\n\n"
+    f"For {bed_improved} renters, decreasing the minimum bedroom requirement by {int(room_delta)} "
+    f"could improve matching, with an average gain of ~{avg_bed_gain:.1f} additional candidates.\n\n"
+    f"For {bud_improved} renters, increasing their budget by {int(price_delta)} dollars "
+    f"could improve matching, with an average gain of ~{avg_bud_gain:.1f} additional candidates.\n\n"
+    f"An email will be sent to each relevant renter with the suggested adjustment."
+)
+
+    return out_csv, summary

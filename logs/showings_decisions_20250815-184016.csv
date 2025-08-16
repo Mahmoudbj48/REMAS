@@ -1,0 +1,2 @@
+owner_id,show,num,considered,mean_top5,sample,owner_application_date,owner_number_of_shows,error_type,error
+a43897fa-4db6-ce81-df88-ed910f1a824f,1,4,10,0.6479,"[{'user_id': 'fb57dfa1-a8be-59da-3b05-73b4b58760a4', 'score': 0.6776}, {'user_id': '9d6bd8d6-a7a7-de13-e83b-9a3eb60647e9', 'score': 0.6539}, {'user_id': 'f7c4fc78-01d7-adcb-cca4-2760d798c867', 'score': 0.6394}]",2025-07-14,0,,
