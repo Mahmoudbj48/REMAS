@@ -1,0 +1,6 @@
+owner_id,show,num,considered,mean_top5,sample,owner_application_date,owner_number_of_shows,error_type,error
+01179705-5b99-02ba-3ef1-fc89b4639185,1,4,10,0.625,"[{'user_id': 'ee7e9f2c-ff9d-6ac6-9027-24419a2904eb', 'score': 0.6679}, {'user_id': '0ec7386d-ad26-2fb6-8038-9cf67d8905f3', 'score': 0.658}, {'user_id': '56f60619-00aa-acbe-00e3-0dfbe53397bc', 'score': 0.617}]",2025-07-24,0,,
+9e0e1e61-e316-515e-e3b4-0fcb3430ae46,1,2,2,0.388,"[{'user_id': '81a6399e-ac29-0d56-06d3-fd9e39bc5942', 'score': 0.4476}, {'user_id': '1d106037-8b71-de31-685e-779958859bd1', 'score': 0.3283}]",2025-07-11,0,,
+c0b9671b-e1a6-755c-afb2-04a12d0f4bd2,1,4,10,0.5718,"[{'user_id': '34095128-d0f6-3bd7-9b37-830f9d654cf0', 'score': 0.5801}, {'user_id': 'e60e2d57-9640-3182-aea4-8b908c4ea88f', 'score': 0.5778}, {'user_id': '6b6e5f0f-eaf9-a2fc-e93c-3bc3c398293e', 'score': 0.5732}]",2025-07-16,0,,
+1823a71c-a471-9a7e-d3c1-3336dae972e9,1,1,1,0.3856,"[{'user_id': '99c26499-68fc-da3b-5b96-da3449b03a53', 'score': 0.3856}]",2025-07-06,0,,
+d87bff96-ca8d-6cfc-367e-4062d0cc6343,1,4,10,0.5533,"[{'user_id': 'cc1a83e4-d76e-3e24-369d-a93dabab52e9', 'score': 0.5988}, {'user_id': '8eecc892-34a8-7ebe-9600-70f922477b0c', 'score': 0.5712}, {'user_id': 'd325c1f9-a799-62b2-1f9c-2716784131bd', 'score': 0.5414}]",2025-07-26,0,,

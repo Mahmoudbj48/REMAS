@@ -148,7 +148,7 @@ class FeedbackInterface:
         """Save feedback to CSV file"""
         
         feedback_id = f"fb_{uuid.uuid4().hex[:8]}"
-        timestamp = datetime.now().isoformat()
+        timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
         
         # Convert match parameters to JSON string
         match_params_str = json.dumps(match_parameters) if match_parameters else "{}"
@@ -167,7 +167,19 @@ class FeedbackInterface:
             match_params_str
         ]
         
-        with open(self.feedback_csv_path, 'a', newline='') as f:
+        # Check if file exists and doesn't end with newline
+        file_needs_newline = False
+        if os.path.exists(self.feedback_csv_path):
+            with open(self.feedback_csv_path, 'rb') as f:
+                f.seek(0, 2)  # Go to end of file
+                if f.tell() > 0:  # File is not empty
+                    f.seek(-1, 2)  # Go to last byte
+                    if f.read(1) != b'\n':
+                        file_needs_newline = True
+        
+        with open(self.feedback_csv_path, 'a', newline='', encoding='utf-8') as f:
+            if file_needs_newline:
+                f.write('\n')
             writer = csv.writer(f)
             writer.writerow(row)
         
