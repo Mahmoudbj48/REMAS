@@ -126,19 +126,14 @@ def generate_customer_notifications(results, timestamp_str):
 
 def generate_owner_email(owner_payload, owner_profile, invited_users, timestamp_str):
     """Generate email message for property owner"""
-    owner_name = owner_profile.get("name", f"Property Owner")
-    owner_email = owner_profile.get("email", f"owner@example.com")
+    owner_name = owner_profile.get("full_name") or owner_profile.get("name", "Property Owner")
+    owner_email = owner_profile.get("email", "owner@example.com")
 
     property_desc = f"{owner_payload.get('bedrooms', 'N/A')}-bedroom property"
     if owner_payload.get("price"):
         property_desc += f" (${owner_payload.get('price')}/month)"
     if owner_payload.get("state"):
         property_desc += f" in {owner_payload.get('state')}"
-
-    # Build user list - no scores shown
-    user_list = ""
-    for i, user_data in enumerate(invited_users, 1):
-        user_list += f"{i}. Qualified candidate looking for similar properties\n"
 
     showing_date = datetime.now().strftime("%A, %B %d, %Y")
 
@@ -148,9 +143,7 @@ def generate_owner_email(owner_payload, owner_profile, invited_users, timestamp_
 
 Excellent news! We've scheduled a showing for your {property_desc} for {showing_date}.
 
-We've carefully selected {len(invited_users)} qualified candidates who are actively looking for properties like yours:
-
-{user_list}
+We've carefully selected {len(invited_users)} qualified candidates who are actively looking for properties like yours.
 
 WHAT'S NEXT:
 • Our team will coordinate with interested candidates
@@ -174,7 +167,7 @@ support@remas.com
 Showing Reference: REF{timestamp_str}"""
 
     return {
-        "message_id": f"owner_notification_{owner_profile.get('name', 'unknown')}_{timestamp_str}",
+        "message_id": f"owner_notification_{owner_profile.get('full_name') or owner_profile.get('name', 'unknown')}_{timestamp_str}",
         "recipient": {
             "name": owner_name,
             "email": owner_email,
@@ -193,8 +186,8 @@ def generate_user_email(
     user_payload, user_profile, owner_payload, owner_profile, match_score, timestamp_str
 ):
     """Generate email message for invited user"""
-    user_name = user_profile.get("name", f"Valued Customer")
-    user_email = user_profile.get("email", f"user@example.com")
+    user_name = user_profile.get("full_name") or user_profile.get("name", "Valued Customer")
+    user_email = user_profile.get("email", "user@example.com")
 
     property_desc = f"{owner_payload.get('bedrooms', 'N/A')}-bedroom property"
     if owner_payload.get("price"):
@@ -279,7 +272,7 @@ support@remas.com
 Property Reference: PROP{timestamp_str[-6:]}"""
 
     return {
-        "message_id": f"user_invitation_{user_profile.get('name', 'unknown')}_{timestamp_str}",
+        "message_id": f"user_invitation_{user_profile.get('full_name') or user_profile.get('name', 'unknown')}_{timestamp_str}",
         "recipient": {
             "name": user_name,
             "email": user_email,
