@@ -9,6 +9,7 @@ from utils.qdrant_connection import (
     _retrieve_payload,
     get_user_profile,
     get_owner_profile,
+    get_random_user_owner_ids,
 )
 from agents.user_parser_agent import invoke_user_parser_agent
 from agents.owner_parser_agent import invoke_owner_parser_agent
@@ -320,9 +321,10 @@ def save_notifications_json(email_messages, timestamp_str):
 def main_page():
     st.title("🏠 Welcome to REMAS")
     st.markdown("### *Real Estate Matching & Scheduling System*")
-    
+
     # Welcome message and guide
-    st.markdown("""
+    st.markdown(
+        """
     Welcome to REMAS! Our intelligent platform connects property owners with potential renters through smart matching and automated scheduling.
     
     **How it works:**
@@ -331,11 +333,12 @@ def main_page():
     - 🧑‍💼 **Realtors** manage the system, schedule showings, and collect feedback
     
     **Getting Started is Easy:**
-    """)
-    
+    """
+    )
+
     # Three columns for user types with descriptions
     col1, col2, col3 = st.columns(3)
-    
+
     with col1:
         st.markdown("#### 🧑‍💼 Realtor")
         st.markdown("*For real estate professionals*")
@@ -346,7 +349,7 @@ def main_page():
         st.markdown("<br>", unsafe_allow_html=True)
         if st.button("Enter as Realtor", type="primary", use_container_width=True):
             st.session_state.page = "realtor"
-    
+
     with col2:
         st.markdown("#### 🧑‍🦱 Renter")
         st.markdown("*Looking for a place to rent?*")
@@ -357,7 +360,7 @@ def main_page():
         st.markdown("<br>", unsafe_allow_html=True)
         if st.button("Enter as Renter", use_container_width=True):
             st.session_state.page = "renter"
-    
+
     with col3:
         st.markdown("#### 🏡 Property Owner")
         st.markdown("*Have a property to rent?*")
@@ -368,9 +371,11 @@ def main_page():
         st.markdown("<br>", unsafe_allow_html=True)
         if st.button("Enter as Property Owner", use_container_width=True):
             st.session_state.page = "owner"
-    
+
     st.markdown("---")
-    st.markdown("💡 **Tip:** Start by entering your role above to explore the system's capabilities!")
+    st.markdown(
+        "💡 **Tip:** Start by entering your role above to explore the system's capabilities!"
+    )
 
 
 def renter_page():
@@ -477,7 +482,7 @@ def realtor_page():
     )
 
     st.info(
-        "📝 **Note for Instructor:** This daily decision process would typically run automatically on a weekly schedule in production. For demonstration purposes, we've made it manually triggerable so you can observe the system's functionality in real-time."
+        "📝 **Note for Lecturer:** This daily decision process would typically run automatically on a weekly schedule in production. For demonstration purposes, we've made it manually triggerable so you can observe the system's functionality in real-time."
     )
 
     if st.button("Run daily decisions and create CSV", key="btn_run_daily"):
@@ -693,6 +698,23 @@ def feedback_page():
     # Initialize feedback interface
     feedback_interface = FeedbackInterface()
 
+    # Auto-populate button for demo
+    st.info(
+        "📝 **Note for Lecturer:** In production, Owner ID and User ID would be automatically selected from the system interface. For demonstration purposes, we provide a button to randomly populate these fields from existing match data."
+    )
+
+    # if st.button("🎲 Auto-fill with Random Match Data (Demo)", key="autofill_ids"):
+    try:
+        random_user_id, random_owner_id = get_random_user_owner_ids()
+        if random_user_id and random_owner_id:
+            st.session_state.demo_user_id = random_user_id
+            st.session_state.demo_owner_id = random_owner_id
+            # st.success(f"✅ Auto-filled with User ID: {random_user_id}, Owner ID: {random_owner_id}")
+        else:
+            st.warning("⚠️ No match data available for auto-fill")
+    except Exception as e:
+        st.error(f"Error getting random IDs: {e}")
+
     # Create form for feedback input with dynamic key for clearing
     if "form_counter" not in st.session_state:
         st.session_state.form_counter = 0
@@ -704,9 +726,17 @@ def feedback_page():
 
         col1, col2 = st.columns(2)
         with col1:
-            owner_id = st.text_input("Owner ID", placeholder="Enter owner ID")
+            owner_id = st.text_input(
+                "Owner ID",
+                placeholder="Enter owner ID",
+                value=st.session_state.get("demo_owner_id", ""),
+            )
         with col2:
-            user_id = st.text_input("User ID", placeholder="Enter user ID")
+            user_id = st.text_input(
+                "User ID",
+                placeholder="Enter user ID",
+                value=st.session_state.get("demo_user_id", ""),
+            )
 
         st.subheader("Feedback Details")
 
