@@ -35,7 +35,7 @@ class FeedbackInterface:
             headers = [
                 'feedback_id', 'timestamp', 'owner_id', 'user_id', 'feedback_type',
                 'feedback_score', 'realtor_notes', 'match_quality_rating', 
-                'showing_outcome', 'suggested_adjustments', 'match_parameters_used'
+                'showing_outcome', 'suggested_adjustments'
             ]
             
             with open(self.feedback_csv_path, 'w', newline='') as f:
@@ -144,14 +144,11 @@ class FeedbackInterface:
             print(f"Error collecting feedback: {e}")
             return None
     
-    def save_feedback(self, feedback: FeedbackInput, match_parameters: Dict[str, Any] = None) -> str:
+    def save_feedback(self, feedback: FeedbackInput) -> str:
         """Save feedback to CSV file"""
         
         feedback_id = f"fb_{uuid.uuid4().hex[:8]}"
         timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
-        
-        # Convert match parameters to JSON string
-        match_params_str = json.dumps(match_parameters) if match_parameters else "{}"
         
         row = [
             feedback_id,
@@ -163,8 +160,7 @@ class FeedbackInterface:
             feedback.realtor_notes,
             feedback.match_quality_rating,
             feedback.showing_outcome,
-            feedback.suggested_adjustments,
-            match_params_str
+            feedback.suggested_adjustments
         ]
         
         # Check if file exists and doesn't end with newline
@@ -355,9 +351,7 @@ class FeedbackInterface:
                 try:
                     row['feedback_score'] = float(row['feedback_score'])
                     row['match_quality_rating'] = int(row['match_quality_rating'])
-                    if row['match_parameters_used']:
-                        row['match_parameters_used'] = json.loads(row['match_parameters_used'])
-                except (ValueError, json.JSONDecodeError):
+                except ValueError:
                     pass  # Keep original string values if conversion fails
                 
                 feedback_data.append(row)
