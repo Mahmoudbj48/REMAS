@@ -710,3 +710,36 @@ def summarize_shows_text(filtered_results: List[Dict[str, Any]]) -> str:
         )
     lines.append("")
     return "\n".join(lines)
+
+
+def get_random_user_owner_ids():
+    """
+    Get random user_id and owner_id from similarity_collection for demo purposes.
+    Returns tuple (user_id, owner_id) or (None, None) if no data available.
+    """
+    try:
+        # Get all records from similarity collection without filter
+        records, _ = client.scroll(
+            collection_name=SIM_COLLECTION,
+            with_payload=True,
+            with_vectors=False,
+            limit=100  # Get a sample to choose from
+        )
+        
+        if not records:
+            return None, None
+            
+        # Pick a random record
+        import random
+        random_record = random.choice(records)
+        payload = random_record.payload or {}
+        
+        # Extract user_id and owner_id from payload
+        user_id = payload.get("user_id")
+        owner_id = payload.get("owner_id")
+        
+        return user_id, owner_id
+        
+    except Exception as e:
+        print(f"Error getting random IDs: {e}")
+        return None, None
