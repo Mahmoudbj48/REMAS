@@ -126,7 +126,9 @@ def generate_customer_notifications(results, timestamp_str):
 
 def generate_owner_email(owner_payload, owner_profile, invited_users, timestamp_str):
     """Generate email message for property owner"""
-    owner_name = owner_profile.get("full_name") or owner_profile.get("name", "Property Owner")
+    owner_name = owner_profile.get("full_name") or owner_profile.get(
+        "name", "Property Owner"
+    )
     owner_email = owner_profile.get("email", "owner@example.com")
 
     property_desc = f"{owner_payload.get('bedrooms', 'N/A')}-bedroom property"
@@ -186,7 +188,9 @@ def generate_user_email(
     user_payload, user_profile, owner_payload, owner_profile, match_score, timestamp_str
 ):
     """Generate email message for invited user"""
-    user_name = user_profile.get("full_name") or user_profile.get("name", "Valued Customer")
+    user_name = user_profile.get("full_name") or user_profile.get(
+        "name", "Valued Customer"
+    )
     user_email = user_profile.get("email", "user@example.com")
 
     property_desc = f"{owner_payload.get('bedrooms', 'N/A')}-bedroom property"
@@ -323,7 +327,7 @@ def main_page():
     **How it works:**
     - 🏡 **Property Owners** list their properties and get matched with qualified renters
     - 🧑‍🦱 **Renters** describe their needs and discover perfect property matches  
-    - 🧑‍💼 **Realtors** manage the system, schedule showings, and collect feedback
+    - 🧑‍💼 **Realtors** manage the system, schedule showings, and submit feedback
     
     **Getting Started is Easy:**
     """
@@ -338,7 +342,7 @@ def main_page():
         st.markdown("• Run daily matching decisions")
         st.markdown("• Schedule property showings")
         st.markdown("• Audit system performance")
-        st.markdown("• Collect feedback")
+        st.markdown("• Submit feedback")
         st.markdown("<br>", unsafe_allow_html=True)
         if st.button("Enter as Realtor", type="primary", use_container_width=True):
             st.session_state.page = "realtor"
@@ -630,6 +634,11 @@ def realtor_page():
 
     # 2) Audit user starvation
     st.subheader("2) Audit User Starvation")
+    
+    st.info(
+        "📝 **Note for Lecturer:** This audit process analyzes all user profiles to identify accounts that haven't received showing opportunities recently. Due to the large volume of data to review, this operation typically takes approximately 5 minutes to complete."
+    )
+    
     if st.button("Run user starvation audit"):
         with st.spinner("Auditing starved users…"):
             try:
@@ -648,6 +657,11 @@ def realtor_page():
 
     # 3) Audit owner starvation
     st.subheader("3) Audit Owner Starvation")
+    
+    st.info(
+        "📝 **Note for Lecturer:** This audit process analyzes all owner profiles to identify accounts that haven't received showing opportunities recently. Due to the large volume of data to review, this operation typically takes approximately 5 minutes to complete."
+    )
+    
     if st.button("Run owner starvation audit"):
         with st.spinner("Auditing starved owners…"):
             try:
@@ -664,9 +678,9 @@ def realtor_page():
             except Exception as e:
                 st.error(f"Error: {e}")
 
-    # 4) Feedback Collection
-    st.subheader("4) Feedback Collection")
-    if st.button("Collect Realtor Feedback"):
+    # 4) Feedback Submission
+    st.subheader("4) Feedback Submission")
+    if st.button("Submit a Feedback"):
         st.session_state.page = "feedback"
 
     if st.button("← Back"):
@@ -675,7 +689,7 @@ def realtor_page():
 
 
 def feedback_page():
-    st.header("Realtor Feedback Collection")
+    st.header("Realtor Feedback")
     st.caption("Provide feedback on user-owner matches to improve the system.")
 
     # Show success message with dismiss option
