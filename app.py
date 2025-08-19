@@ -385,7 +385,8 @@ def renter_page():
     price = st.number_input("Max price (USD/month)", min_value=0, step=50, value=2000)
     month = st.selectbox("Available from", MONTHS, index=8)
     soft = st.text_area(
-        "Soft preferences (comma-separated)", placeholder="quiet, near cafes, gym, pool"
+        "Additional preferences",
+        placeholder="Example: I'm looking for a quiet neighborhood with good access to public transportation. A gym or fitness center nearby would be great, and I'd love to be close to coffee shops and restaurants.",
     )
 
     # Lock immediately on click
@@ -432,8 +433,8 @@ def owner_page():
     )
     month = st.selectbox("Available from", MONTHS, index=8)
     soft = st.text_area(
-        "Soft description (comma-separated)",
-        placeholder="quiet street, pool, gym, remote-work friendly",
+        "Property description",
+        placeholder="Example: This charming apartment is located on a quiet street with easy access to downtown. The building features a modern gym and rooftop pool area. It's perfect for remote work with high-speed internet and dedicated workspace areas.",
     )
 
     # Lock immediately on click
@@ -634,11 +635,11 @@ def realtor_page():
 
     # 2) Audit user starvation
     st.subheader("2) Audit User Starvation")
-    
+
     st.info(
         "📝 **Note for Lecturer:** This audit process analyzes all user profiles to identify accounts that haven't received showing opportunities recently. Due to the large volume of data to review, this operation typically takes approximately 5 minutes to complete."
     )
-    
+
     if st.button("Run user starvation audit"):
         with st.spinner("Auditing starved users…"):
             try:
@@ -657,11 +658,11 @@ def realtor_page():
 
     # 3) Audit owner starvation
     st.subheader("3) Audit Owner Starvation")
-    
+
     st.info(
         "📝 **Note for Lecturer:** This audit process analyzes all owner profiles to identify accounts that haven't received showing opportunities recently. Due to the large volume of data to review, this operation typically takes approximately 5 minutes to complete."
     )
-    
+
     if st.button("Run owner starvation audit"):
         with st.spinner("Auditing starved owners…"):
             try:
