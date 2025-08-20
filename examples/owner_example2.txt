@@ -1,0 +1,18 @@
+INPUT (Owner):
+State: Miami
+Number of rooms (min bedrooms): 2
+Max price (USD/month): 2300
+Available from: October
+Property description: Modern condo with a rooftop pool and gym access, located just a few minutes from the beach. 
+Pet-friendly and recently renovated kitchen with new appliances. 
+Ideal for professionals or couples who enjoy an active lifestyle.
+
+OUTPUT (System):
+=== Estimated demand for your listing ===
+- Your listing appears as the #1 match for ~0 user(s).
+- Your listing appears in the top 5 for ~0 user(s).
+- There are ~3 user(s) whose requirements strongly fit your listing.
+
+Note: These are early estimates to help you gauge interest.
+Actual showings are scheduled by our agent considering fairness, user availability,
+and platform-wide demand management.

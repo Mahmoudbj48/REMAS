@@ -1,0 +1,18 @@
+INPUT (Renter):
+State: San Francisco
+Number of rooms (min bedrooms): 3
+Max price (USD/month): 4000
+Available from: August
+Additional preferences: Looking for a modern apartment or house close to tech hubs and coworking spaces. 
+Good schools nearby are important, and I’d love to be within walking distance of grocery stores and parks. 
+A safe neighborhood with vibrant local restaurants would be ideal.
+
+OUTPUT (System):
+=== Estimated opportunities for you ===
+- You appear as the #1 candidate in ~2 listing(s).
+- You appear in the top 5 for ~8 listing(s).
+- You have a strong ‘hard-attribute’ fit with ~16 listing(s).
+
+Note: These are early estimates based on current matches.
+Final invitations depend on scheduling, fairness (giving chances to those with fewer shows),
+and listing popularity. You may not be invited to all matched properties.

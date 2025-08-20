@@ -1,0 +1,18 @@
+INPUT (Renter):
+State: Miami
+Number of rooms (min bedrooms): 1
+Max price (USD/month): 1500
+Available from: October
+Additional preferences: I'd like to be close to the beach but in a quiet neighborhood. 
+Access to public transport is important since I don’t drive. 
+Pet-friendly is a must, and having a small balcony would be great for relaxation.
+
+OUTPUT (System):
+=== Estimated opportunities for you ===
+- You appear as the #1 candidate in ~6 listing(s).
+- You appear in the top 5 for ~17 listing(s).
+- You have a strong ‘hard-attribute’ fit with ~34 listing(s).
+
+Note: These are early estimates based on current matches.
+Final invitations depend on scheduling, fairness (giving chances to those with fewer shows),
+and listing popularity. You may not be invited to all matched properties.

@@ -1,0 +1,18 @@
+INPUT (Owner):
+State: New York
+Number of rooms (min bedrooms): 3
+Max price (USD/month): 2000
+Available from: September
+Property description: A spacious family home in a quiet neighborhood with a large backyard and garage. 
+Close to good schools, playgrounds, and local shopping centers. 
+Perfect for families looking for both comfort and convenience.
+
+OUTPUT (System):
+=== Estimated demand for your listing ===
+- Your listing appears as the #1 match for ~1 user(s).
+- Your listing appears in the top 5 for ~3 user(s).
+- There are ~9 user(s) whose requirements strongly fit your listing.
+
+Note: These are early estimates to help you gauge interest.
+Actual showings are scheduled by our agent considering fairness, user availability,
+and platform-wide demand management.

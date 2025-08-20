@@ -3075,3 +3075,12 @@ timestamp,input_tokens,output_tokens,total_tokens,text_input
 2025-08-20T22:32:47.370098,1,0,1,clean
 2025-08-20T22:55:48.027558,5,0,5,"allowed smoking, dogs allowed"
 2025-08-20T22:56:41.252238,5,0,5,smoking and pets allowed
+2025-08-20T23:53:42.932090,8,0,8,"large backyard, garage, close to schools"
+2025-08-20T23:54:44.165408,8,0,8,"modern kitchen, rooftop pool, pet-friendly"
+2025-08-20T23:58:29.395898,32,0,32,"spacious family home, quiet neighborhood, large backyard, garage, close to good schools, playgrounds, and shopping centers, perfect for families seeking comfort and convenience"
+2025-08-21T00:00:26.307808,32,0,32,"modern condo, rooftop pool, gym access, close to the beach, pet-friendly, recently renovated kitchen, new appliances, ideal for professionals or couples, active lifestyle"
+2025-08-21T00:02:04.826984,40,0,40,"spacious house with a private garden, garage, and open living area, family-friendly area near reputable schools, parks, and community centers, great for families who need extra space, strong neighborhood community feel"
+2025-08-21T00:03:07.906057,36,0,36,"spacious house with a private garden, garage, open living area, family-friendly area, near reputable schools, parks, and community centers, great for families, strong neighborhood community feel"
+2025-08-21T00:03:48.666145,27,0,27,"quiet neighborhood, good access to public transportation, gym or fitness center nearby, close to coffee shops and restaurants, backyard or outdoor space preferred"
+2025-08-21T00:04:42.713868,18,0,18,"close to the beach, quiet neighborhood, access to public transport, pet-friendly, small balcony"
+2025-08-21T00:05:49.604789,28,0,28,"modern, close to tech hubs, coworking spaces, good schools, walking distance to grocery stores and parks, safe neighborhood, vibrant local restaurants"

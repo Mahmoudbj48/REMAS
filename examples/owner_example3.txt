@@ -1,0 +1,18 @@
+INPUT (Owner):
+State: Los Angeles
+Number of rooms (min bedrooms): 4
+Max price (USD/month): 1500
+Available from: August
+Property description: Spacious house with a private garden, garage, and open living area. 
+Located in a family-friendly area near reputable schools, parks, and community centers. 
+Great for families who need extra space and want a strong neighborhood community feel.
+
+OUTPUT (System):
+=== Estimated demand for your listing ===
+- Your listing appears as the #1 match for ~2 user(s).
+- Your listing appears in the top 5 for ~4 user(s).
+- There are ~6 user(s) whose requirements strongly fit your listing.
+
+Note: These are early estimates to help you gauge interest.
+Actual showings are scheduled by our agent considering fairness, user availability,
+and platform-wide demand management.

@@ -1,0 +1,18 @@
+INPUT (Renter):
+State: New York
+Number of rooms (min bedrooms): 3
+Max price (USD/month): 2000
+Available from: September
+Additional preferences: I'm looking for a quiet neighborhood with good access to public transportation. 
+A gym or fitness center nearby would be great, and I'd love to be close to coffee shops and restaurants. 
+A backyard or outdoor space would be an added bonus.
+
+OUTPUT (System):
+=== Estimated opportunities for you ===
+- You appear as the #1 candidate in ~3 listing(s).
+- You appear in the top 5 for ~7 listing(s).
+- You have a strong ‘hard-attribute’ fit with ~16 listing(s).
+
+Note: These are early estimates based on current matches.
+Final invitations depend on scheduling, fairness (giving chances to those with fewer shows),
+and listing popularity. You may not be invited to all matched properties.

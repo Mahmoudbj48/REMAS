@@ -1,0 +1,42 @@
+INPUT (Realtor):
+1) Manage Show Day Agent
+Maximum invitations to schedule
+
+10
+
+OUTPUT (System):
+there will be 8 shows that we will schedule for you :
+
+show 1 :
+owner: John Lopez, +1-555-1788 , owner2@example.com, Chicago, 5 bed rooms , 2100 dollars, have been shown 0 times. have been applicant to the system at 2025-07-07..
+an invitaion mail will be sent to you, the owner and the 4 matched candidatess.
+
+show 2 :
+owner: Emily Rodriguez, +1-555-1478 , owner5@example.com, Chicago, 1 bed rooms , 2100 dollars, have been shown 0 times. have been applicant to the system at 2025-07-09..
+an invitaion mail will be sent to you, the owner and the 4 matched candidatess.
+
+show 3 :
+owner: Emily Anderson, +1-555-8036 , owner1@example.com, Chicago, 2 bed rooms , 2100 dollars, have been shown 0 times. have been applicant to the system at 2025-07-12..
+an invitaion mail will be sent to you, the owner and the 4 matched candidatess.
+
+show 4 :
+owner: Matthew Garcia, +1-555-2374 , moodmath48@gmail.com, Los Angeles, 1 bed rooms , 1500 dollars, have been shown 0 times. have been applicant to the system at 2025-08-01..
+an invitaion mail will be sent to you, the owner and the 5 matched candidatess.
+
+show 5 :
+owner: Thomas Smith, +1-555-4293 , owner1@example.com, Chicago, 2 bed rooms , 800 dollars, have been shown 0 times. have been applicant to the system at 2025-07-20..
+an invitaion mail will be sent to you, the owner and the 4 matched candidatess.
+
+show 6 :
+owner: Sophia Williams, +1-555-7687 , owner1@example.com, Miami, 1 bed rooms , 1800 dollars, have been shown 1 time. have been applicant to the system at 2025-08-08..
+an invitaion mail will be sent to you, the owner and the 6 matched candidatess.
+
+show 7 :
+owner: William Miller, +1-555-9353 , owner1@example.com, San Francisco, 1 bed rooms , 1800 dollars, have been shown 0 times. have been applicant to the system at 2025-07-12..
+an invitaion mail will be sent to you, the owner and the 4 matched candidatess.
+
+show 8 :
+owner: James Lopez, +1-555-5625 , owner7@example.com, Los Angeles, 2 bed rooms , 2100 dollars, have been shown 2 times. have been applicant to the system at 2025-07-09..
+an invitaion mail will be sent to you, the owner and the 5 matched candidatess.
+
++  action
