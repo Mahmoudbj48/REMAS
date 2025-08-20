@@ -380,7 +380,7 @@ def main():
         print("3. Apply latest learning")
         print("4. Exit")
 
-        choice = input("\nSelect option (1-5): ").strip()
+        choice = input("\nSelect option (1-4): ").strip()
 
         if choice == "1":
             agent.show_current_weights()
@@ -406,7 +406,7 @@ def main():
             break
 
         else:
-            print("Invalid choice. Please select 1-5.")
+            print("Invalid choice. Please select 1-4.")
 
 
 if __name__ == "__main__":

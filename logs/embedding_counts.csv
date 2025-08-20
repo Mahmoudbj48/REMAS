@@ -3062,5 +3062,10 @@ timestamp,input_tokens,output_tokens,total_tokens,text_input
 2025-08-16T11:16:40.422807,17,0,17,"great for children and old people, great view, gym, markets close, warm area"
 2025-08-16T11:19:01.489459,16,0,16,"great school close, great for kids and old people, warm area close to markets"
 2025-08-17T09:48:41.094925,3,0,3,near shopping centres
+<<<<<<< HEAD
 2025-08-19T22:45:09.512795,7,0,7,"quiet, close to gym and banks"
 2025-08-19T22:46:05.388232,6,0,6,quite close to gym and bank
+=======
+2025-08-20T10:11:30.596032,21,0,21,"quiet neighborhood, good access to public transportation, gym or fitness center nearby, close to coffee shops and restaurants"
+2025-08-20T10:13:15.230382,31,0,31,"charming apartment, quiet street, easy access to downtown, modern gym, rooftop pool area, perfect for remote work, high-speed internet, dedicated workspace areas"
+>>>>>>> 42809af32f1749abe3169a4c66e1a0c418c47c5f

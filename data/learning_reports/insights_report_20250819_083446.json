@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-08-19T08:34:46.743498",
+  "feedback_summary": {
+    "total_entries": 30,
+    "unique_properties": 30,
+    "avg_score": 3.6266666666666665,
+    "success_rate": 0.6
+  },
+  "insights_generated": {
+    "total_insights": 30,
+    "new_insights": 0,
+    "sample_insights": {
+      "01179705-5b99-02ba-3ef1-fc89b4639185": "Consider adding an extra bedroom or marketing toward smaller families for better target alignment.",
+      "23487dd1-85e7-069d-dc58-63456737c181": "\"Highlight the vibrant neighborhood and nearby amenities prominently in marketing materials.\"",
+      "2497854e-2e73-0ce9-0248-662a102b55f6": "Enhance outdoor spaces with cozy seating to maximize enjoyment of the prime location."
+    }
+  },
+  "insights_file": "data/property_insights.json"
+}
