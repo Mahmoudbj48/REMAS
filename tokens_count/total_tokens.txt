@@ -1,0 +1,15 @@
+Token Usage Summary
+===================
+
+gpt-4o (text completion):
+  Input tokens:   2,780,060  →  $6.95
+  Output tokens:    337,354  →  $3.37
+
+Embeddings (text-embedding-3-small):
+  Tokens: 70,338  →  $0.0014
+
+-------------------
+Total cost ~ $10.32
+
+Note: Some API calls were not counted due to errors or system failures,
+but the missing amount is very small (less than $2).

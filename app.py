@@ -380,7 +380,7 @@ def renter_page():
 
     state = st.selectbox("State", ALLOWED_STATES, index=0)
     num_rooms = st.number_input(
-        "Number of rooms (min bedrooms)", min_value=0, max_value=20, step=1, value=2
+        "Number of rooms (min bedrooms)", min_value=0, max_value=20, step=1, value=3
     )
     price = st.number_input("Max price (USD/month)", min_value=0, step=50, value=2000)
     month = st.selectbox("Available from", MONTHS, index=8)
@@ -424,12 +424,12 @@ def renter_page():
 def owner_page():
     st.header("Owner — Describe your property")
 
-    state = st.selectbox("State", ALLOWED_STATES, index=4)
+    state = st.selectbox("State", ALLOWED_STATES, index=0)
     num_rooms = st.number_input(
         "Number of rooms (bedrooms)", min_value=0, max_value=20, step=1, value=3
     )
     price = st.number_input(
-        "Asking price (USD/month)", min_value=0, step=50, value=2100
+        "Asking price (USD/month)", min_value=0, step=50, value=2000
     )
     month = st.selectbox("Available from", MONTHS, index=8)
     soft = st.text_area(

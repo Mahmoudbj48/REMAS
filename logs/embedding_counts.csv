@@ -3071,3 +3071,7 @@ timestamp,input_tokens,output_tokens,total_tokens,text_input
 >>>>>>> 42809af32f1749abe3169a4c66e1a0c418c47c5f
 2025-08-20T21:18:27.824871,21,0,21,"cool area, access to subway and cafes, near to schools and banks, new building, quiet for children"
 2025-08-20T21:19:32.107380,14,0,14,"cool area, close to subway, great schools around, quiet for children"
+2025-08-20T22:32:10.889658,1,0,1,clean
+2025-08-20T22:32:47.370098,1,0,1,clean
+2025-08-20T22:55:48.027558,5,0,5,"allowed smoking, dogs allowed"
+2025-08-20T22:56:41.252238,5,0,5,smoking and pets allowed
