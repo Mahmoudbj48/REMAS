@@ -705,7 +705,7 @@ def summarize_shows_text(filtered_results: List[Dict[str, Any]]) -> str:
             f"have been applicant to the system at {s['app_date']}.."
         )
         lines.append(
-            f"an invitaion mail will be sent to you, the owner and the {s['num_invites']} matched user"
+            f"an invitaion mail will be sent to you, the owner and the {s['num_invites']} matched candidates"
             f"{'' if s['num_invites']==1 else 's'}."
         )
     lines.append("")

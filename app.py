@@ -480,10 +480,10 @@ def realtor_page():
     )
 
     st.info(
-        "📝 **Note for Lecturer:** This daily decision process would typically run automatically on a weekly schedule in production. For demonstration purposes, we've made it manually triggerable so you can observe the system's functionality in real-time."
+        "📝 **Note for Lecturer:** This Weekly decision process would typically run automatically on a weekly schedule in production. For demonstration purposes, we've made it manually triggerable so you can observe the system's functionality in real-time."
     )
 
-    if st.button("Run daily decisions and create CSV", key="btn_run_daily"):
+    if st.button("Run Weekly decisions", key="btn_run_daily"):
         with st.spinner(
             "🔄 Processing complex matching algorithms and generating recommendations... This may take a moment as we analyze available properties and user preferences."
         ):
@@ -594,10 +594,10 @@ def realtor_page():
                                 )
 
                     if user_messages:
-                        st.write("### 🏠 User Invitations")
+                        st.write("### 🏠 Candidate Invitations")
                         for i, msg in enumerate(user_messages[:3]):  # Show first 3
                             with st.expander(
-                                f"User Email {i+1}: {msg.get('recipient', {}).get('name', 'N/A')}",
+                                f"Candidate Email {i+1}: {msg.get('recipient', {}).get('name', 'N/A')}",
                                 expanded=(i == 0),
                             ):
                                 st.write(
@@ -634,13 +634,13 @@ def realtor_page():
             st.toast("Results cleared")
 
     # 2) Audit user starvation
-    st.subheader("2) Audit User Starvation")
+    st.subheader("2) Audit Renter Starvation")
 
     st.info(
-        "📝 **Note for Lecturer:** This audit process analyzes all user profiles to identify accounts that haven't received showing opportunities recently. Due to the large volume of data to review, this operation typically takes approximately 5 minutes to complete."
+        "📝 **Note for Lecturer:** This audit process analyzes all user profiles to identify accounts that haven't received showing opportunities recently. Due to the large volume of data to review, this operation typically takes approximately 5 minutes to complete.(This process would typically run automatically on a weekly schedule in production)"
     )
 
-    if st.button("Run user starvation audit"):
+    if st.button("Run Renter starvation audit"):
         with st.spinner("Auditing starved users…"):
             try:
                 users_csv, users_summary = run_user_starvation_audit_simple()
@@ -660,7 +660,7 @@ def realtor_page():
     st.subheader("3) Audit Owner Starvation")
 
     st.info(
-        "📝 **Note for Lecturer:** This audit process analyzes all owner profiles to identify accounts that haven't received showing opportunities recently. Due to the large volume of data to review, this operation typically takes approximately 5 minutes to complete."
+        "📝 **Note for Lecturer:** This audit process analyzes all owner profiles to identify accounts that haven't received showing opportunities recently. Due to the large volume of data to review, this operation typically takes approximately 5 minutes to complete. (This process would typically run automatically on a weekly schedule in production)"
     )
 
     if st.button("Run owner starvation audit"):

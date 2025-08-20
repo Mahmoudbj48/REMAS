@@ -1,0 +1,485 @@
+{
+  "generated_at": "2025-08-20T21:21:38.387915",
+  "total_messages": 27,
+  "email_messages": [
+    {
+      "message_id": "owner_notification_Emily Gonzalez_20250820-212123",
+      "recipient": {
+        "name": "Emily Gonzalez",
+        "email": "user6@example.com",
+        "type": "property_owner"
+      },
+      "email": {
+        "subject": "Property Showing Scheduled - 3 Interested Candidates",
+        "body": "Dear Emily Gonzalez,\n\nExcellent news! We've scheduled a showing for your 1-bedroom property ($2000/month) in San Francisco for Wednesday, August 20, 2025.\n\nWe've carefully selected 3 qualified candidates who are actively looking for properties like yours.\n\nWHAT'S NEXT:\n• Our team will coordinate with interested candidates\n• You'll receive confirmation calls from each attendee\n• We recommend preparing your property for viewing\n• Please ensure the property is accessible on the scheduled date\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Candidates Invited: 3\n• Expected Response: Within 24 hours\n\nIf you have any questions or need to reschedule, please contact our team immediately.\n\nBest regards,\nREMAS Property Management Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nShowing Reference: REF20250820-212123"
+      },
+      "metadata": {
+        "showing_date": "Wednesday, August 20, 2025",
+        "candidates_invited": 3,
+        "property_id": "unknown"
+      }
+    },
+    {
+      "message_id": "user_invitation_Mia Smith_20250820-212123",
+      "recipient": {
+        "name": "Mia Smith",
+        "email": "moodmath48@gmail.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Mia Smith,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $2000/month in San Francisco\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Rent at $2000/month - comfortably within your budget\n\nPROPERTY FEATURES:\nspacious apartment, modern home, newly renovated kitchen and bathroom, conveniently located near public transit and parks, close to shops and restaurants\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in San Francisco\n• Monthly Rent: $2000\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.6165,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 2000,
+        "user_budget": 2300
+      }
+    },
+    {
+      "message_id": "user_invitation_Charlotte Rodriguez_20250820-212123",
+      "recipient": {
+        "name": "Charlotte Rodriguez",
+        "email": "user6@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Charlotte Rodriguez,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $2000/month in San Francisco\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Rent at $2000/month - comfortably within your budget\n\nPROPERTY FEATURES:\nspacious apartment, modern home, newly renovated kitchen and bathroom, conveniently located near public transit and parks, close to shops and restaurants\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in San Francisco\n• Monthly Rent: $2000\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.5589,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 2000,
+        "user_budget": 2000
+      }
+    },
+    {
+      "message_id": "user_invitation_John Jones_20250820-212123",
+      "recipient": {
+        "name": "John Jones",
+        "email": "mahmoudbj48@gmail.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 New Property Opportunity - Worth a Look!",
+        "body": "Dear John Jones,\n\nWe have a property that might interest you! While it may not check every box on your wishlist, it could be a great opportunity worth exploring.\n\nPROPERTY DETAILS:\n1-bedroom property for $2000/month in San Francisco\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in San Francisco - your preferred area\n✓ Rent at $2000/month - comfortably within your budget\n\nPROPERTY FEATURES:\nspacious apartment, modern home, newly renovated kitchen and bathroom, conveniently located near public transit and parks, close to shops and restaurants\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in San Francisco\n• Monthly Rent: $2000\n\nSometimes the best discoveries come from keeping an open mind. We'd love for you to see it in person!\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.4993,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 2000,
+        "user_budget": 3000
+      }
+    },
+    {
+      "message_id": "owner_notification_Joseph Wilson_20250820-212123",
+      "recipient": {
+        "name": "Joseph Wilson",
+        "email": "user6@example.com",
+        "type": "property_owner"
+      },
+      "email": {
+        "subject": "Property Showing Scheduled - 3 Interested Candidates",
+        "body": "Dear Joseph Wilson,\n\nExcellent news! We've scheduled a showing for your 1-bedroom property ($1200/month) in San Francisco for Wednesday, August 20, 2025.\n\nWe've carefully selected 3 qualified candidates who are actively looking for properties like yours.\n\nWHAT'S NEXT:\n• Our team will coordinate with interested candidates\n• You'll receive confirmation calls from each attendee\n• We recommend preparing your property for viewing\n• Please ensure the property is accessible on the scheduled date\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Candidates Invited: 3\n• Expected Response: Within 24 hours\n\nIf you have any questions or need to reschedule, please contact our team immediately.\n\nBest regards,\nREMAS Property Management Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nShowing Reference: REF20250820-212123"
+      },
+      "metadata": {
+        "showing_date": "Wednesday, August 20, 2025",
+        "candidates_invited": 3,
+        "property_id": "unknown"
+      }
+    },
+    {
+      "message_id": "user_invitation_Olivia Gonzalez_20250820-212123",
+      "recipient": {
+        "name": "Olivia Gonzalez",
+        "email": "moodmath48@gmail.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Olivia Gonzalez,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $1200/month in San Francisco\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in San Francisco - your preferred area\n✓ Rent at $1200/month - comfortably within your budget\n\nPROPERTY FEATURES:\nspacious, bright unit, walking distance to Noho and Soho, close to Union Square Farmers' Market, near Whole Foods, elevator building\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in San Francisco\n• Monthly Rent: $1200\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.6168,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1200,
+        "user_budget": 3000
+      }
+    },
+    {
+      "message_id": "user_invitation_Daniel Williams_20250820-212123",
+      "recipient": {
+        "name": "Daniel Williams",
+        "email": "user7@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Daniel Williams,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $1200/month in San Francisco\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in San Francisco - your preferred area\n✓ Rent at $1200/month - comfortably within your budget\n\nPROPERTY FEATURES:\nspacious, bright unit, walking distance to Noho and Soho, close to Union Square Farmers' Market, near Whole Foods, elevator building\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in San Francisco\n• Monthly Rent: $1200\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.5954,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1200,
+        "user_budget": 2400
+      }
+    },
+    {
+      "message_id": "user_invitation_Ava Thomas_20250820-212123",
+      "recipient": {
+        "name": "Ava Thomas",
+        "email": "mhmod.0586367379@gmail.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Ava Thomas,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $1200/month in San Francisco\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in San Francisco - your preferred area\n✓ Rent at $1200/month - comfortably within your budget\n\nPROPERTY FEATURES:\nspacious, bright unit, walking distance to Noho and Soho, close to Union Square Farmers' Market, near Whole Foods, elevator building\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in San Francisco\n• Monthly Rent: $1200\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.5617,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1200,
+        "user_budget": 1600
+      }
+    },
+    {
+      "message_id": "owner_notification_Ava Martin_20250820-212123",
+      "recipient": {
+        "name": "Ava Martin",
+        "email": "user6@example.com",
+        "type": "property_owner"
+      },
+      "email": {
+        "subject": "Property Showing Scheduled - 3 Interested Candidates",
+        "body": "Dear Ava Martin,\n\nExcellent news! We've scheduled a showing for your 3-bedroom property ($1800/month) in Miami for Wednesday, August 20, 2025.\n\nWe've carefully selected 3 qualified candidates who are actively looking for properties like yours.\n\nWHAT'S NEXT:\n• Our team will coordinate with interested candidates\n• You'll receive confirmation calls from each attendee\n• We recommend preparing your property for viewing\n• Please ensure the property is accessible on the scheduled date\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Candidates Invited: 3\n• Expected Response: Within 24 hours\n\nIf you have any questions or need to reschedule, please contact our team immediately.\n\nBest regards,\nREMAS Property Management Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nShowing Reference: REF20250820-212123"
+      },
+      "metadata": {
+        "showing_date": "Wednesday, August 20, 2025",
+        "candidates_invited": 3,
+        "property_id": "unknown"
+      }
+    },
+    {
+      "message_id": "user_invitation_Alice Anderson_20250820-212123",
+      "recipient": {
+        "name": "Alice Anderson",
+        "email": "user5@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Alice Anderson,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n3-bedroom property for $1800/month in Miami\n\nWHAT MAKES THIS SPECIAL:\n✓ Located in Miami - your preferred area\n✓ Rent at $1800/month - comfortably within your budget\n\nPROPERTY FEATURES:\nspacious, 1,200 sq ft, fully renovated, includes home office and dining area, hardwood floors, modern eat-in kitchen, near Fort Tryon Park and Hudson River waterfront, close to dining options\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 3 bedroom in Miami\n• Monthly Rent: $1800\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.6347,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1800,
+        "user_budget": 2400
+      }
+    },
+    {
+      "message_id": "user_invitation_William Hernandez_20250820-212123",
+      "recipient": {
+        "name": "William Hernandez",
+        "email": "user3@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear William Hernandez,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n3-bedroom property for $1800/month in Miami\n\nWHAT MAKES THIS SPECIAL:\n✓ Located in Miami - your preferred area\n\nPROPERTY FEATURES:\nspacious, 1,200 sq ft, fully renovated, includes home office and dining area, hardwood floors, modern eat-in kitchen, near Fort Tryon Park and Hudson River waterfront, close to dining options\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 3 bedroom in Miami\n• Monthly Rent: $1800\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.6272,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1800,
+        "user_budget": null
+      }
+    },
+    {
+      "message_id": "user_invitation_John Jones_20250820-212123",
+      "recipient": {
+        "name": "John Jones",
+        "email": "user6@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear John Jones,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n3-bedroom property for $1800/month in Miami\n\nWHAT MAKES THIS SPECIAL:\n✓ Located in Miami - your preferred area\n\nPROPERTY FEATURES:\nspacious, 1,200 sq ft, fully renovated, includes home office and dining area, hardwood floors, modern eat-in kitchen, near Fort Tryon Park and Hudson River waterfront, close to dining options\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 3 bedroom in Miami\n• Monthly Rent: $1800\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.5964,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1800,
+        "user_budget": null
+      }
+    },
+    {
+      "message_id": "owner_notification_Isabella Hernandez_20250820-212123",
+      "recipient": {
+        "name": "Isabella Hernandez",
+        "email": "user2@example.com",
+        "type": "property_owner"
+      },
+      "email": {
+        "subject": "Property Showing Scheduled - 3 Interested Candidates",
+        "body": "Dear Isabella Hernandez,\n\nExcellent news! We've scheduled a showing for your 1-bedroom property ($2400/month) in Miami for Wednesday, August 20, 2025.\n\nWe've carefully selected 3 qualified candidates who are actively looking for properties like yours.\n\nWHAT'S NEXT:\n• Our team will coordinate with interested candidates\n• You'll receive confirmation calls from each attendee\n• We recommend preparing your property for viewing\n• Please ensure the property is accessible on the scheduled date\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Candidates Invited: 3\n• Expected Response: Within 24 hours\n\nIf you have any questions or need to reschedule, please contact our team immediately.\n\nBest regards,\nREMAS Property Management Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nShowing Reference: REF20250820-212123"
+      },
+      "metadata": {
+        "showing_date": "Wednesday, August 20, 2025",
+        "candidates_invited": 3,
+        "property_id": "unknown"
+      }
+    },
+    {
+      "message_id": "user_invitation_Alice Miller_20250820-212123",
+      "recipient": {
+        "name": "Alice Miller",
+        "email": "user1@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Alice Miller,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $2400/month in Miami\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in Miami - your preferred area\n✓ Rent at $2400/month - comfortably within your budget\n\nPROPERTY FEATURES:\nnear shopping centers and public transportation, private room part of a two-bedroom unit, relaxed roommate, access to living room and eat-in kitchen, additional fee for pets, no smoking\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in Miami\n• Monthly Rent: $2400\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.6155,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 2400,
+        "user_budget": 3000
+      }
+    },
+    {
+      "message_id": "user_invitation_Sophia Davis_20250820-212123",
+      "recipient": {
+        "name": "Sophia Davis",
+        "email": "user1@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 New Property Opportunity - Worth a Look!",
+        "body": "Dear Sophia Davis,\n\nWe have a property that might interest you! While it may not check every box on your wishlist, it could be a great opportunity worth exploring.\n\nPROPERTY DETAILS:\n1-bedroom property for $2400/month in Miami\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in Miami - your preferred area\n✓ Rent at $2400/month - comfortably within your budget\n\nPROPERTY FEATURES:\nnear shopping centers and public transportation, private room part of a two-bedroom unit, relaxed roommate, access to living room and eat-in kitchen, additional fee for pets, no smoking\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in Miami\n• Monthly Rent: $2400\n\nSometimes the best discoveries come from keeping an open mind. We'd love for you to see it in person!\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.4291,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 2400,
+        "user_budget": 3000
+      }
+    },
+    {
+      "message_id": "user_invitation_Matthew Gonzalez_20250820-212123",
+      "recipient": {
+        "name": "Matthew Gonzalez",
+        "email": "moodmath48@gmail.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 New Property Opportunity - Worth a Look!",
+        "body": "Dear Matthew Gonzalez,\n\nWe have a property that might interest you! While it may not check every box on your wishlist, it could be a great opportunity worth exploring.\n\nPROPERTY DETAILS:\n1-bedroom property for $2400/month in Miami\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in Miami - your preferred area\n✓ Rent at $2400/month - comfortably within your budget\n\nPROPERTY FEATURES:\nnear shopping centers and public transportation, private room part of a two-bedroom unit, relaxed roommate, access to living room and eat-in kitchen, additional fee for pets, no smoking\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in Miami\n• Monthly Rent: $2400\n\nSometimes the best discoveries come from keeping an open mind. We'd love for you to see it in person!\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.3478,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 2400,
+        "user_budget": 2400
+      }
+    },
+    {
+      "message_id": "owner_notification_John Lopez_20250820-212123",
+      "recipient": {
+        "name": "John Lopez",
+        "email": "user1@example.com",
+        "type": "property_owner"
+      },
+      "email": {
+        "subject": "Property Showing Scheduled - 3 Interested Candidates",
+        "body": "Dear John Lopez,\n\nExcellent news! We've scheduled a showing for your 1-bedroom property ($1800/month) in Chicago for Wednesday, August 20, 2025.\n\nWe've carefully selected 3 qualified candidates who are actively looking for properties like yours.\n\nWHAT'S NEXT:\n• Our team will coordinate with interested candidates\n• You'll receive confirmation calls from each attendee\n• We recommend preparing your property for viewing\n• Please ensure the property is accessible on the scheduled date\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Candidates Invited: 3\n• Expected Response: Within 24 hours\n\nIf you have any questions or need to reschedule, please contact our team immediately.\n\nBest regards,\nREMAS Property Management Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nShowing Reference: REF20250820-212123"
+      },
+      "metadata": {
+        "showing_date": "Wednesday, August 20, 2025",
+        "candidates_invited": 3,
+        "property_id": "unknown"
+      }
+    },
+    {
+      "message_id": "user_invitation_Thomas Gonzalez_20250820-212123",
+      "recipient": {
+        "name": "Thomas Gonzalez",
+        "email": "user1@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Thomas Gonzalez,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $1800/month in Chicago\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in Chicago - your preferred area\n\nPROPERTY FEATURES:\nlocated near Maimonides Hospital and NYU Brooklyn, features two beds, AC/heat, private closet, mini study table, ideal for medical students or families, may be noisy at night, sharing space with other\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in Chicago\n• Monthly Rent: $1800\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.5261,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1800,
+        "user_budget": null
+      }
+    },
+    {
+      "message_id": "user_invitation_Isabella Taylor_20250820-212123",
+      "recipient": {
+        "name": "Isabella Taylor",
+        "email": "user6@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Isabella Taylor,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $1800/month in Chicago\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in Chicago - your preferred area\n\nPROPERTY FEATURES:\nlocated near Maimonides Hospital and NYU Brooklyn, features two beds, AC/heat, private closet, mini study table, ideal for medical students or families, may be noisy at night, sharing space with other\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in Chicago\n• Monthly Rent: $1800\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.5065,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1800,
+        "user_budget": null
+      }
+    },
+    {
+      "message_id": "user_invitation_Matthew Martinez_20250820-212123",
+      "recipient": {
+        "name": "Matthew Martinez",
+        "email": "user6@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 New Property Opportunity - Worth a Look!",
+        "body": "Dear Matthew Martinez,\n\nWe have a property that might interest you! While it may not check every box on your wishlist, it could be a great opportunity worth exploring.\n\nPROPERTY DETAILS:\n1-bedroom property for $1800/month in Chicago\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in Chicago - your preferred area\n✓ Rent at $1800/month - comfortably within your budget\n\nPROPERTY FEATURES:\nlocated near Maimonides Hospital and NYU Brooklyn, features two beds, AC/heat, private closet, mini study table, ideal for medical students or families, may be noisy at night, sharing space with other\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in Chicago\n• Monthly Rent: $1800\n\nSometimes the best discoveries come from keeping an open mind. We'd love for you to see it in person!\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.4989,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1800,
+        "user_budget": 3000
+      }
+    },
+    {
+      "message_id": "owner_notification_Daniel Brown_20250820-212123",
+      "recipient": {
+        "name": "Daniel Brown",
+        "email": "moodmath48@gmail.com",
+        "type": "property_owner"
+      },
+      "email": {
+        "subject": "Property Showing Scheduled - 2 Interested Candidates",
+        "body": "Dear Daniel Brown,\n\nExcellent news! We've scheduled a showing for your 1-bedroom property ($3000/month) in New York for Wednesday, August 20, 2025.\n\nWe've carefully selected 2 qualified candidates who are actively looking for properties like yours.\n\nWHAT'S NEXT:\n• Our team will coordinate with interested candidates\n• You'll receive confirmation calls from each attendee\n• We recommend preparing your property for viewing\n• Please ensure the property is accessible on the scheduled date\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Candidates Invited: 2\n• Expected Response: Within 24 hours\n\nIf you have any questions or need to reschedule, please contact our team immediately.\n\nBest regards,\nREMAS Property Management Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nShowing Reference: REF20250820-212123"
+      },
+      "metadata": {
+        "showing_date": "Wednesday, August 20, 2025",
+        "candidates_invited": 2,
+        "property_id": "unknown"
+      }
+    },
+    {
+      "message_id": "user_invitation_Emma Martin_20250820-212123",
+      "recipient": {
+        "name": "Emma Martin",
+        "email": "user7@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Emma Martin,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $3000/month in New York\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in New York - your preferred area\n✓ Rent at $3000/month - comfortably within your budget\n\nPROPERTY FEATURES:\nstylish, centrally located, comfortable living experience, exclusive neighborhood\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in New York\n• Monthly Rent: $3000\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.5988,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 3000,
+        "user_budget": 3000
+      }
+    },
+    {
+      "message_id": "user_invitation_Ava Williams_20250820-212123",
+      "recipient": {
+        "name": "Ava Williams",
+        "email": "moodmath48@gmail.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Ava Williams,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $3000/month in New York\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in New York - your preferred area\n✓ Rent at $3000/month - comfortably within your budget\n\nPROPERTY FEATURES:\nstylish, centrally located, comfortable living experience, exclusive neighborhood\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in New York\n• Monthly Rent: $3000\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.5926,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 3000,
+        "user_budget": 3000
+      }
+    },
+    {
+      "message_id": "owner_notification_Michael Jackson_20250820-212123",
+      "recipient": {
+        "name": "Michael Jackson",
+        "email": "user1@example.com",
+        "type": "property_owner"
+      },
+      "email": {
+        "subject": "Property Showing Scheduled - 3 Interested Candidates",
+        "body": "Dear Michael Jackson,\n\nExcellent news! We've scheduled a showing for your 1-bedroom property ($1500/month) in Chicago for Wednesday, August 20, 2025.\n\nWe've carefully selected 3 qualified candidates who are actively looking for properties like yours.\n\nWHAT'S NEXT:\n• Our team will coordinate with interested candidates\n• You'll receive confirmation calls from each attendee\n• We recommend preparing your property for viewing\n• Please ensure the property is accessible on the scheduled date\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Candidates Invited: 3\n• Expected Response: Within 24 hours\n\nIf you have any questions or need to reschedule, please contact our team immediately.\n\nBest regards,\nREMAS Property Management Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nShowing Reference: REF20250820-212123"
+      },
+      "metadata": {
+        "showing_date": "Wednesday, August 20, 2025",
+        "candidates_invited": 3,
+        "property_id": "unknown"
+      }
+    },
+    {
+      "message_id": "user_invitation_Thomas Gonzalez_20250820-212123",
+      "recipient": {
+        "name": "Thomas Gonzalez",
+        "email": "user1@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Thomas Gonzalez,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $1500/month in Chicago\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in Chicago - your preferred area\n\nPROPERTY FEATURES:\nspacious bedroom with antique furnishings, private Victorian bathroom, steps from public transportation, close to Barclays Center, vibrant neighborhood, easy access to Manhattan\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in Chicago\n• Monthly Rent: $1500\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.6523,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1500,
+        "user_budget": null
+      }
+    },
+    {
+      "message_id": "user_invitation_Charlotte Jones_20250820-212123",
+      "recipient": {
+        "name": "Charlotte Jones",
+        "email": "user2@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Charlotte Jones,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $1500/month in Chicago\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in Chicago - your preferred area\n\nPROPERTY FEATURES:\nspacious bedroom with antique furnishings, private Victorian bathroom, steps from public transportation, close to Barclays Center, vibrant neighborhood, easy access to Manhattan\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in Chicago\n• Monthly Rent: $1500\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.6459,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1500,
+        "user_budget": null
+      }
+    },
+    {
+      "message_id": "user_invitation_Michael Johnson_20250820-212123",
+      "recipient": {
+        "name": "Michael Johnson",
+        "email": "user6@example.com",
+        "type": "potential_tenant"
+      },
+      "email": {
+        "subject": "🏠 Great Property Match Found - Showing Scheduled!",
+        "body": "Dear Michael Johnson,\n\nGreat news! We found a property that aligns well with what you're looking for.\n\nPROPERTY DETAILS:\n1-bedroom property for $1500/month in Chicago\n\nWHAT MAKES THIS SPECIAL:\n✓ 1 bedrooms - exactly what you requested\n✓ Located in Chicago - your preferred area\n✓ Rent at $1500/month - comfortably within your budget\n\nPROPERTY FEATURES:\nspacious bedroom with antique furnishings, private Victorian bathroom, steps from public transportation, close to Barclays Center, vibrant neighborhood, easy access to Manhattan\n\nSHOWING DETAILS:\n• Date: Wednesday, August 20, 2025\n• Property: 1 bedroom in Chicago\n• Monthly Rent: $1500\n\nThis property has caught our attention for you, and we think you'll appreciate what it has to offer.\n\nTO CONFIRM YOUR ATTENDANCE:\n• Reply to this email with \"CONFIRM\"\n• Call us at (555) 123-REMAS\n• Text us at (555) 123-REMAS with code: VIEW2123\n\n⏰ Please confirm within 24 hours to reserve your viewing time.\n\nWe're excited to show you this property!\n\nWarm regards,\nThe REMAS Team\nsupport@remas.com\n(555) 123-REMAS\n\n---\nProperty Reference: PROP212123"
+      },
+      "metadata": {
+        "match_score": 0.6403,
+        "showing_date": "Wednesday, August 20, 2025",
+        "property_price": 1500,
+        "user_budget": 2500
+      }
+    }
+  ]
+}
