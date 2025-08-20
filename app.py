@@ -644,7 +644,7 @@ def realtor_page():
         with st.spinner("Auditing starved users…"):
             try:
                 users_csv, users_summary = run_user_starvation_audit_simple()
-                st.markdown("#### Summary (Users)")
+                st.markdown("#### Summary (Candidates)")
                 st.write(users_summary)
                 with open(users_csv, "rb") as fh:
                     st.download_button(
