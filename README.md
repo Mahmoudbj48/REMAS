@@ -4,7 +4,7 @@ An autonomous multi-agent system for intelligent real estate matching and schedu
 
 ## 🎬 Quick Demo
 
-![REMAS Demo](docs/demo.mp4)
+[▶️ Watch Demo](docs/demo.mp4)
 _Watch REMAS in action: Natural language input → Multi-agent reasoning → Autonomous scheduling_
 
 1. **As a Renter**: Describe your ideal apartment in natural language
@@ -207,3 +207,4 @@ python -m streamlit run app.py
 The application will open in your browser at `http://localhost:8501`
 
 ## 📄 License
+
