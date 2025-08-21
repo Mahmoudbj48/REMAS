@@ -130,7 +130,7 @@ REMAS showcases autonomous agents that collaborate to provide comprehensive real
 
 ### Automated Reports
 
-- Daily showing decisions with detailed reasoning
+- Weekly showing decisions with detailed reasoning
 - Starvation audits identifying improvement opportunities
 - Performance metrics and system health indicators
 
